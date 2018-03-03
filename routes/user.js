@@ -24,6 +24,80 @@ router.post('/removeUser', function(req, res, next) {
 
 router.use(csrfProtection);
 
+
+router.get('/myorders/:id', function(req, res, next)
+{
+  var params = req.params;
+  var id = params.id;
+
+  Order.findById(id, function(err, order)
+  {
+    var m_order = orderProcessor.process(order, pizzaData);
+    m_order.title = "Order Details";
+
+    if (err) return next(err);
+    else {
+      res.status(200);
+      res.render('order', m_order);
+    }
+  });
+});
+
+
+router.get('/myorders', isLoggedIn, function(req, res, next) {
+  Order.find({
+    user: req.user
+  }, function(err, orders) {
+    if (err) {
+      return res.write('Error!');
+    }
+    var cart;
+    orders.forEach(function(order) {
+      cart = new Cart(order.cart);
+      order.items = cart.generateArray();
+    });
+    res.render('user/myorders', {
+      csrfToken: req.csrfToken(),
+      orders: orders,
+      user: req.user
+    });
+  });
+});
+
+router.post('/myorders', function(req, res, next) {
+  if (req.body.email) {
+    User.findOne({
+      email: req.body.email
+    }, function(err, doc) {
+
+      if (err) {
+        req.flash('error', 'failed')
+        console.log(err);
+      }
+
+      doc.email = req.body.email;
+      doc.name = req.body.name;
+      doc.state = req.body.state;
+      doc.city = req.body.city;
+      
+      doc.save();
+
+    });
+  } else {
+    console.log("Invalid email!");
+  }
+
+  if (req.session.oldUrl) {
+    var oldUrl = req.session.oldUrl;
+    req.session.oldUrl = null;
+    res.redirect(oldUrl);
+  } else {
+    res.redirect('/user/myorders');
+  }
+
+  res.end();
+});
+
 router.get('/profile', isLoggedIn, function(req, res, next) {
   Order.find({
     user: req.user
