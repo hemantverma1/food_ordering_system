@@ -19,10 +19,11 @@
         <tbody>
 
         {{# each orders }}
-
         <tr>
-          <td>i</td>
-          <td>time</td>
+          <td></td>
+          <td>{{this.date}}<br/>
+              {{this.time}}
+          </td>
           <td>
             <strong>{{this.name}}</strong><br/>
             {{this.address}}<br/>
@@ -39,7 +40,11 @@
 
           <td> ₹ {{this.cart.totalPrice}}</td>
 
-          <td><span class="label label-<% if(order.processed) { %>success<% } else { %>default<% } %>"><%= order.status %></span></td>
+          <td>
+          <span class-"badge">{{this.status}}</span>
+          <!--<span class="label label-<% if(order.processed) { %>success<% } else { %>default<% } %>">{{this.status}}-->
+          </span>
+          </td>
 
           <td>
             <button class="delete btn btn-danger " id="<%= order.id %>"><span class="glyphicon glyphicon-trash" /></button>
