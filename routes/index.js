@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Cart = require('../models/cart');
-var User = require('../models/user');
+var {User} = require('../models/user');
 
 var Product = require('../models/product');
 var Order = require('../models/order');
@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
       productChunks.push(docs.slice(i, i + chunkSize));
     }
     res.render('shop/index', {
-      title: 'Food cart',
+      title: 'Dominos Pizza',
       products: productChunks,
       successMsg: successMsg,
       noMessages: !successMsg

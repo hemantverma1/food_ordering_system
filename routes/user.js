@@ -5,7 +5,7 @@ var passport = require('passport');
 
 var Order = require('../models/order');
 var Cart = require('../models/cart');
-var User = require('../models/user');
+var {User} = require('../models/user');
 
 var csrfProtection = csrf();
 
@@ -45,7 +45,6 @@ router.get('/profile', isLoggedIn, function(req, res, next) {
 });
 
 router.post('/profile', function(req, res, next) {
-
   if (req.body.email) {
     User.findOne({
       email: req.body.email
