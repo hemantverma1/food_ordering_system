@@ -13,7 +13,7 @@ Install dependencies
 ```
 Seed the Database (for the very first run only)
 ``` shell
-	node seed/product-seeder.js
+    node seed/product-seeder.js
 ```
 Run the Server
 ``` shell
