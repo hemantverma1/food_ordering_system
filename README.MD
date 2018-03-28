@@ -11,10 +11,13 @@ Install dependencies
 ``` shell
     npm install
 ```
-
+Seed the Database (for the very first run only)
+``` shell
+	node seed/product-seeder.js
+```
 Run the Server
 ``` shell
-	./bin/www
+    npm start
 ```
 ### Technologies
 ###### Back-end
