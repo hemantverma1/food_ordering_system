@@ -87,31 +87,18 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
     return res.redirect('/shopping-cart');
   }
   var cart = new Cart(req.session.cart);
+  var order = new Order({
+    user: req.user,
+    cart: cart,
+    address: req.body.address,
+    name: req.body.name,
+    paymentId: 'COD'
+  });
 
-  var stripe = require("stripe")("sk_test_bgBdBuFAydIEVdepmjpaJKUy");
-
-  stripe.charges.create({
-    amount: cart.totalPrice * 100,
-    currency: "usd",
-    source: req.body.stripeToken, // obtained with Stripe.js
-    description: "Test Charge"
-  }, function(err, charge) {
-    if (err) {
-      req.flash('error', 'System could not finalize your purchase!');
-      return res.redirect('/checkout');
-    }
-    var order = new Order({
-      user: req.user,
-      cart: cart,
-      address: req.body.address,
-      name: req.body.name,
-      paymentId: charge.id
-    });
-    order.save(function(err, result) {
-      req.flash('success', 'Food ordered successfully!');
-      req.session.cart = null;
-      res.redirect('/');
-    });
+  order.save(function(err, result) {
+    req.flash('success', 'Food ordered successfully!');
+    req.session.cart = null;
+    res.render('shop/orderplaced');
   });
 });
 
