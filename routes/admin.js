@@ -35,7 +35,7 @@ router.post('/signin', passport.authenticate('local.supersignin', {
 module.exports = router;
 
 function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) {
+  if (req.isAuthenticated() && req['user'].employeeId) {
     return next();
   }
   res.redirect('/admin/signin');
