@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Checkout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<form action="/admin/add-item?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">
+<p> 
+    <label >Enter name: </label>
+    <input id="title" type="text" name="title_field">
+</p>
+
+<p>
+    <label >Enter Description: </label>
+    <input id="description" type="text" name="desc_field">
+</p>
+
+<p>
+    <label >Enter Price: </label>
+    <input id="price" type="text" name="price_field">
+</p>
+
+<p>
+	<label >Upload Image: </label>
+    <input type="file" name="image_field">
+</p>
+    <input type="submit" value="OK">
+
+
+</form>
+
+</html>
