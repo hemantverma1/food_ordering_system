@@ -82,6 +82,7 @@ router.get('/checkout', isLoggedIn, function(req, res, next) {
   });
 });
 
+
 router.post('/checkout', isLoggedIn, function(req, res, next) {
   if (!req.session.cart) {
     return res.redirect('/shopping-cart');
