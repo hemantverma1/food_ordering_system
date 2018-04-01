@@ -13,6 +13,8 @@ var appDir = path.dirname(require.main.filename);
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 
+var Order = require('../models/order');
+
 
 var csrfProtection = csrf({ cookie: true });
 router.use(csrfProtection);
@@ -39,6 +41,51 @@ router.use("/public", express.static('public'));
 var upload = multer({
      storage: Storage
 }).array("image_field",1); //Field name and max count
+
+router.get('/vieworders', isLoggedIn, function(req, res, next) {
+
+  Order.find({}, function(err, orders) {
+    var orderMap = {};
+
+    orders.forEach(function(order) {
+      orderMap[order._id] = order;
+    });
+
+    res.render('admin/vieworders', {
+        csrfToken: req.csrfToken(),
+        orderMap: orderMap,
+        user: req.user
+    });
+
+  });
+
+});
+
+router.get('/remove-order/:id',isLoggedIn, function(req, res, next) {
+  console.log("Deleted Order");
+  Order.findByIdAndRemove(req.params.id, function (err) {});
+  res.redirect('/admin/vieworders');
+});
+
+router.get('/ontheway-order/:id',isLoggedIn, function(req, res, next) {
+  Order.findById(req.params.id, function(err, order)
+  {
+    order.preparing = false;
+    order.ontheway = true;
+    order.delivered = false;
+    order.save(function (err) { res.redirect('/admin/vieworders');});
+  });
+});
+
+router.get('/delivered-order/:id',isLoggedIn, function(req, res, next) {
+  Order.findById(req.params.id, function(err, order)
+  {
+    order.preparing = false;
+    order.ontheway = false;
+    order.delivered = true;
+    order.save(function (err) { res.redirect('/admin/vieworders');});
+  });
+});
 
 
 router.get('/', isLoggedIn, function(req, res) {

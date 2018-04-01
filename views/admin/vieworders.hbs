@@ -1,9 +1,9 @@
 <div class="container">
 
   <div class="panel panel-default">
-    <div class="panel-heading"><h3 class="panel-title">My Orders</h3></div>
+    <div class="panel-heading"><h3 class="panel-title">List of Orders</h3></div>
     <div class="panel-body">
-      <table id="orders" class="table">
+      <table id="orderMap" class="table">
         <thead>
         <tr>
           <th></th>
@@ -13,12 +13,12 @@
           <th width="5%">Total Quantity</th>
           <th width="10%">Total Price</th>
           <th width="100">Status</th>
-          <th width="180">Feedback</th>
+          <th width="180">Actions</th>
         </tr>
         </thead>
         <tbody>
 
-        {{# each orders }}
+        {{# each orderMap }}
         <tr>
           <td></td>
           <td>{{this.date}}<br/>
@@ -31,7 +31,7 @@
           </td>
 
           <td>
-          {{# each this.items }}
+          {{# each this.cart.items }}
           <strong>{{ this.item.title }}</strong><br/> : {{ this.qty }} x <span class="badge"> ₹ {{ this.price }}</span> <br/>
           {{/each}}
           </td>
@@ -55,7 +55,9 @@
           </td>
 
           <td>
-
+            <a href="remove-order/{{this._id}}" class="delete btn btn-danger" role="button">Delete</a><br/>
+            <a href="ontheway-order/{{this._id}}" class="view btn btn-primary " role="button">On the Way</a><br/>
+            <a href="delivered-order/{{this._id}}" class="process btn btn-success " role="button">Delivered</a>
           </td>
         </tr>
 
@@ -67,6 +69,4 @@
   </div>
 
 </div>
-
-<script src="/javascripts/orders.js"></script>
 
