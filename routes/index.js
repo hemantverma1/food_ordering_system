@@ -93,7 +93,10 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
     cart: cart,
     address: req.body.address,
     name: req.body.name,
-    paymentId: 'COD'
+    paymentId: 'COD',
+    date: getdatestr(),
+    time: gettimestr(),
+    status: 'Pending'
   });
 
   order.save(function(err, result) {
@@ -111,4 +114,31 @@ function isLoggedIn(req, res, next) {
   }
   req.session.oldUrl = req.url;
   res.redirect('/user/signin');
+}
+
+function getdatestr() {
+
+  var today = new Date();
+  var dd = today.getDate();
+
+  var mm = today.getMonth() + 1; 
+  var yyyy = today.getFullYear();
+
+  if (dd < 10) {
+      dd = '0' + dd;
+  } 
+
+  if (mm < 10 ) {
+      mm = '0' + mm;
+  }
+
+  today = dd + '/' + mm + '/' + yyyy;
+  return today;
+}
+
+function gettimestr() {
+  var d = new Date(),
+      h = (d.getHours()<10?'0':'') + d.getHours(),
+      m = (d.getMinutes()<10?'0':'') + d.getMinutes();
+  return (h + ':' + m);
 }
