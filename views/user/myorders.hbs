@@ -7,13 +7,13 @@
         <thead>
         <tr>
           <th></th>
-          <th width="180">Created</th>
-          <th width="15%">Customer</th>
+          <th >Created</th>
+          <th >Customer</th>
           <th>Description</th>
-          <th width="5%">Total Quantity</th>
-          <th width="10%">Total Price</th>
-          <th width="100">Status</th>
-          <th width="180">Feedback</th>
+          <th>Total Quantity</th>
+          <th>Total Price</th>
+          <th >Status</th>
+          <th>Feedback</th>
         </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
 
           <td>
           {{# each this.items }}
-          <strong>{{ this.item.title }}</strong><br/> : {{ this.qty }} x <span class="badge"> ₹ {{ this.price }}</span> <br/>
+          {{ this.qty }} x <span class="badge"> ₹ {{ this.price }}</span> : <strong>{{ this.item.title }}</strong>  <br/>
           {{/each}}
           </td>
 
