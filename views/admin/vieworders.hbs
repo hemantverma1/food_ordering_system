@@ -44,14 +44,17 @@
 
           <td>
             {{# if this.preparing }}
+              <i class="fas fa-spinner"></i>
               <span class="label label-default">Preparing</span>
             {{/if}}
 
             {{# if this.ontheway }}
+              <i class="fas fa-motorcycle"></i>
               <span class="label label-primary">On the Way</span>
             {{/if}}
 
             {{# if this.delivered }}
+              <i class="fas fa-check"></i>
               <span class="label label-success">Delivered</span>
             {{/if}}
           </td>
