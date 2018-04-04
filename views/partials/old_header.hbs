@@ -1,0 +1,73 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><i class="fas fa-utensils"></i> Food Ordering System</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+
+            {{# if login }}
+                    
+                {{#if admin}}
+
+                    <li class="dropdown">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Admin Menu<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+
+                    <li><a href="/admin/modify-item">Modify Menu</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/admin/vieworders">View Orders</a></li>
+
+                {{ else }}
+
+                    <li>
+                        <a href="/shopping-cart/">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i> Food Cart
+                            <span class="badge">{{session.cart.totalQty}}</span>
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> User Menu<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+
+                    <li><a href="/user/profile">User Profile</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/user/myorders">My Orders</a></li>
+
+                {{/if}}
+
+                    <li role="separator" class="divider"></li>
+                    <li><a href="/user/logout">Logout</a></li>
+                      
+            {{ else }}
+
+                <li>
+                    <a href="/shopping-cart/">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Food Cart
+                        <span class="badge">{{session.cart.totalQty}}</span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+
+                <li><a href="/user/signup">Register</a></li>
+                <li><a href="/user/signin">Login</a></li>
+            {{/if}}
+
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
