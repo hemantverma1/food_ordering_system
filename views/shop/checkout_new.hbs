@@ -1,0 +1,1745 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="js csstransforms gr__secure_payu_in" lang="en">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="HandheldFriendly" content="true">
+      <meta name="viewport" content="width=device-width;target-densitydpi=device-dpi;initial-scale=1.0; maximum-scale=1.0;minimum-scale=1.0; user-scalable=0;">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <title>Payment Portal</title>
+      <script type="text/javascript">
+         var baseImagePath = 'https://static.payu.in/images/';
+      </script>
+      <link href="PayUbiz_files/screen.css" rel="stylesheet" type="text/css">
+      <link href="PayUbiz_files/base.css" rel="stylesheet" type="text/css">
+      <style type="text/css">.disable_offer_display{display:none;} .merchant_logoUcYeWc{height:129px;width:617px;background: url('') no-repeat scroll left top ; float:left;} .merchant_logoqy0x9n{height:85px;width:290px;background: url('') no-repeat scroll left top ; float:left;} .custom_fcolorJRbiKK{color: #F57023 !important} .custom_colorUkmneO{background-color: #FF8A1C !important;} .custom_fcolorUkmneO{color: #FFFFFF !important} .custom_color3w8JJJ{background-color: #FF8A05 !important;} .custom_fcolor3w8JJJ{color: #FF8A05 !important} .custom_coloreBqYx5{background-color: #FF9924 !important;} .custom_colorRU8kMZ{background-color: #FC9219 !important;} .custom_colortPh3jX{background-color: #FC8B0A !important;} .custom_color7MVcEX{background-color: #Ea5b31 !important;} .custom_colorahqGuP{background-color: #ea5b31 !important;} .custom_fcolorahqGuP{color: #ea5b31 !important} .custom_colorE54XfC{background-color: ea5b31 !important;} .custom_colorBqWIKe{background-color: #ea5b31 !important;} </style>
+      <script type="text/javascript" async="" id="fittipaldi" src="PayUbiz_files/fittipaldiJs.js"></script>
+      <script type="text/javascript" src="javascripts/checkout.js"></script>
+   </head>
+   <body data-gr-c-s-loaded="true">
+      <div data-role="page" class="container" id="page">
+         <div id="header" class="clearfix">
+            <div id="merchantLogo" class="">
+
+              <h2> <i class="fas fa-utensils"></i> Food Ordering System - Payment Portal</h2>
+            </div>
+         </div>
+         <script type="text/javascript">
+            if(typeof String.prototype.trim !== 'function') {
+              String.prototype.trim = function() {
+                return this.replace(/^\s+|\s+$/g, '');
+              }
+            }
+            
+            if(!console){
+              var console = {};
+              console.log = function(){}
+            }
+            
+            
+         </script>
+         <!-- Google Code for Remarketing Tag -->
+         <div style="visibility: hidden; display: none" id="senfg245lfsd">w8xz-ocsg_1</div>
+         <link type="text/css" rel="stylesheet" href="PayUbiz_files/extracss.css">
+         <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+         <!-- Custom Modernizr build (should always be on the top) -->
+         <!-- <script src="https://static.payu.in/js/new.modernizr-2.0.6.min.js"></script> -->
+         <script type="text/javascript">
+            var storeCardOnByDefault = 0;
+         </script>
+         <noscript>
+            <!-- #content Start -->
+            <div id="content" class="message prepend-top append-bottom">
+               <div class="message append-bottom prepend-top append-1 prepend-1">
+                  <h4 class="append-bottom">
+                     <img width="32" height="31"
+                        src="https://static.payu.in/images/error.jpg"><span class="err">Error.</span>
+                     We are sorry, it seems that the javascript on your browser is
+                     disabled. <a
+                        href="http://support.google.com/bin/answer.py?hl=en&answer=23852"
+                        target="_blank"> Click Here</a> to see how to enable javascript.
+                  </h4>
+               </div>
+            </div>
+            <!-- #content End -->
+         </noscript>
+         <div onclick="ShowDiv(event)" id="divBlock" style="position: absolute; z-index: 100; left: 838px; top: 408.6px; visibility: hidden;">
+            <div style="padding-left: 10%;">
+               <div class="arrow_up"></div>
+            </div>
+            <div id="divInfo" class="div_info">
+               <img id="ccvv_help_img" class="help-img" src="PayUbiz_files/cvv_visa_master_new.png">
+               <p id="CVVHelpText" style="width: 168px; padding: 0px; margin: 5px 0 0 0px; font-size: 10px;">A 3-digit number in reverse italics on the back of your card</p>
+            </div>
+         </div>
+         <style>
+            #FeebackButton {
+            opacity: .8;
+            position: fixed;
+            width: 30px;
+            height: 155px;
+            top: 45%;
+            margin-top: -145px;
+            right: 0;
+            background-image: url('https://static.payu.in/images/ helpnfeedback2.png ');
+            cursor: pointer;
+            }
+            #FeebackButton:hover {
+            opacity: 1;
+            }
+            #FeedbackPopup {
+            display: none;
+            z-index: 9999;
+            color: #3d3d3d;
+            padding: 15px;
+            width: 235px;
+            position: fixed;
+            top: 45%;
+            margin-top: -175px;
+            background: #FFF;
+            border: 2px solid #DDD;
+            right: -275px;
+            border-right: none;
+            }
+            #FeedbackPopup .close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            padding: 3px 8px;
+            color: #FFF;
+            width: 8px;
+            }
+            #FeedbackPopup h1 {
+            color: #3d3d3d;
+            margin: 0;
+            padding: 0;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            }
+            #FeedbackPopup p {
+            margin-bottom: 10px;
+            }
+            #FeedbackPopup .feedback_body textarea {
+            border: 1px solid #AAA;
+            padding: 10px;
+            width: 90%;
+            height: 100px;
+            resize: none;
+            }
+            #FeedbackPopup .feedback_body .char_left {
+            font-size: 12px;
+            font-style: italic;
+            color: #AAA;
+            }
+            #FeedbackPopup  #FeedbackLoading {
+            padding: 51px;
+            text-align: center;
+            display: none;
+            }
+            #FeedbackPopup #FeedbackThanks {
+            display: none;
+            text-align: center;
+            padding: 35px;
+            border-top: 1px dashed #AAA;
+            border-bottom: 1px dashed #AAA;
+            background: #fbfcbd;
+            height: 150px;
+            }
+            #FeedbackPopup #thanx_heading {
+            color: #3d3d3d;
+            margin: 0;
+            padding: 0;
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            padding-top: 33px;
+            }
+            #FeedbackPopup #FeedbackSubmit {
+            font-size: 12px;
+            padding: 5px 8px;
+            color: #FFF;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            }
+            #FeedbackPopup #ReturnToPaymentPage {
+            display: none;
+            padding: 5px 8px;
+            color: #FFF;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            }
+            .Feedback_error {
+            background: none repeat scroll 0 0 #FDC6C6 !important;
+            border-color: #BF0303 !important;
+            color: #BF0303;
+            }
+            .FeedbackDefault {
+            font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            color: #FFF;
+            border: 1px solid #FFF;
+            overflow: hidden;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            font-weight: 400;
+            background: #00AEEF;
+            }
+         </style>
+
+
+
+         <script type="text/javascript">
+            encodedPayuId='23b515dfdf0161ee2396ba143e118c2a';
+            vcoMerchantkey='';
+            externalClientId='';
+            var isMcpEnabled = "";
+            var paypalMcpProductType = "";
+            var citiRewardsCatalogue = "";
+            var dccHardRestrict = ""; 
+            var surchargeData = ''; 
+            var transaction_fee = "226.00"; 
+            var vijaya_white_label_merchant = ""; 
+            function toogleFeedback(callback){
+                if(!$("#FeedbackPopup").is(":visible")){
+                    $("#FeedbackPopup").show().animate({right:0}, 1000);
+                }else{
+                    $("#FeedbackPopup").animate({right:'-275px'}, 1000, function(){
+                        $("#FeedbackPopup").hide();
+                        if(typeof callback == 'function') callback();
+                    });
+                }
+            }
+            
+            function submitFeedback(txnId , feedback_url){
+            
+                var error = false;
+                if(!$("#FeedbackContent").val() || (/^\s*$/.test($("#FeedbackContent").val()))) {
+                    error = true;
+                    $("#FeedbackContent").addClass("Feedback_error");
+                }
+            
+                
+                if(!error) {
+                    jQuery.ajax({
+                        type : "POST",
+                        url : feedback_url,
+                        data : $("#feedbackForm").serialize(),
+                        success: function() {
+                            $("#FeedbackPopup #heading_para").hide();
+                            $("#FeedbackPopup .feedback_body").hide();
+                            $("#FeedbackPopup #FeedbackThanks").fadeIn('fast');
+                            $("#FeedbackPopup #FeedbackSubmit").hide();
+                            $("#FeedbackPopup #ReturnToPaymentPage").fadeIn('fast');
+                            $("#FeedbackPopup #captcha").hide();
+                            setTimeout(function(){
+                                if($("#FeedbackPopup").is(":visible")) {
+                                    toogleFeedback(function(){
+                                        /*$("#FeedbackPopup  #FeedbackLoading").hide();
+                                        $("#FeedbackPopup .feedback_body").fadeIn('fast');
+                                        $("#FeedbackPopup #FeedbackThanks").hide();
+                                        $("#FeedbackPopup #FeedbackSubmit").fadeIn('fast');
+                                        $("#FeedbackPopup #ReturnToPaymentPage").hide();
+                                        $("#FeedbackPopup #heading_para").show();*/
+                                    });
+                                }
+                            }, 30000);
+                        },
+                        error: function() {
+                            $("#captcha input[type='text']").addClass("Feedback_error");
+                        }
+            
+                    });
+                    /*$("#FeedbackContent").val("");
+                    $('#CharLeft').empty().append('(512 characters left)');*/
+                }
+            }
+            
+            function countRemaining(){
+                var txtAreaObj = $('#FeedbackContent');
+                var cntObj = $('#CharLeft');
+                var max_length = 512;
+                if(txtAreaObj.val().length >= max_length){
+                    txtAreaObj.val(txtAreaObj.val().substring(0, max_length));
+                }
+                if(cntObj){
+                    var rem = parseInt(max_length, 10) - parseInt(txtAreaObj.val().length, 10);
+                    rem     = isNaN(rem) ? 0 : rem;
+                    var m = rem<2?" character":" characters";
+                    cntObj.html("(" + rem + m +  " left)");
+                }
+            }
+            
+            function removeError_feedback(event){
+                var $target = $(event.currentTarget);
+                var keycode = getKeyCode(event);
+                if($target.hasClass("Feedback_error")  && keycode !== 8) {
+                    $target.removeClass("Feedback_error");
+                }
+            }
+            
+            function closeFeedback() {
+                toogleFeedback(function(){
+                });
+             }
+            
+            window.document.onkeydown = function (e)
+              {
+                if (!e) e = event;
+                if (e.keyCode == 27 && $("#FeedbackPopup").is(":visible"))
+                  toogleFeedback();
+              }
+         </script>
+		
+         <div id="FeebackButton" onclick="toogleFeedback();" class="FeedbackDefault"></div>
+         <form id="feedbackForm">
+            <div id="FeedbackPopup">
+               <a href="javascript:void(0);" onclick="toogleFeedback();" class="close FeedbackDefault">X</a>
+               <h1>Feedback</h1>
+               <p id="heading_para">Facing a problem in making payment?
+                  Leave us a message.
+               </p>
+               <div class="feedback_body">
+                  <textarea name="FeedbackContent" id="FeedbackContent" form="feedbackForm" onkeydown=" removeError_feedback(event); countRemaining();" onkeyup="countRemaining();" onkeypress="countRemaining();" cols="40" rows="5" placeholder="Type your message here.."></textarea>
+                  <span id="CharLeft" class="char_left">(512 characters left)</span>
+               </div>
+               <input name="captcha_disabled" value="1" type="hidden">
+               <div id="FeedbackLoading">
+                  <img src="PayUbiz_files/ajax-loader-new.gif">
+               </div>
+               <div id="FeedbackThanks">
+                  <h1 id="thanx_heading">Thanks!</h1>
+                  <p>Your message has been successfully sent</p>
+               </div>
+               <input name="txnid" value="23b515dfdf0161ee2396ba143e118c2a" type="hidden">
+               <div name="FeedbackSubmit" id="FeedbackSubmit" onclick="submitFeedback('23b515dfdf0161ee2396ba143e118c2a' , 'https://secure.payu.in/CustomerFeedback')" class="order-summary  order-summary ">Submit
+                  feedback
+               </div>
+               <div id="ReturnToPaymentPage" onclick="closeFeedback();" class="order-summary order-summary ">Close
+                  Feedback
+               </div>
+            </div>
+         </form>
+
+
+
+         <input id="issuing_bank" value="" type="hidden">
+         <input id="banvcoMerchantKeyapik_code" value="" type="hidden">
+         <input id="selected_tab" value="" type="hidden">
+         <input id="down_flag" value="0" type="hidden">
+         <input id="invalid_card_flag" value="0" type="hidden">
+			<div id="charge-error" class="alert alert-danger {{#if noError}}hidden{{/if}}">
+				{{errMsg}}
+			</div>
+         <div id="order-summary" class="order-summary   order-summary  ">
+            <p id="amountdiv" class="span-5  amount padding1 " style="text-indent: 14px; padding-right: 0; width: 227px">
+               <span id="amountTag">Amount</span>: <span id="selectedCurrency">Rs. </span><span id="totalAmount1">{{total}} </span> <span class="inr-equiv"></span>
+            </p>
+            <p id="txndiv" class="append-1 last transid padding1 summary-right">
+               Transaction ID: <span> w8xz-ocsg_1</span>
+            </p>
+         </div>
+         <div id="content" class="" style="float: left;">
+            <div class="payment_box_header" style="position: relative;">
+               <p>Choose a payment method</p>
+            </div>
+            <div id="payment" class="left topborder" style="width: 713px;">
+               <div style="display:none;" id="invalid_card_error" class="invalid_card_details">
+                  Invalid card number. Please re-enter the card details and click Pay
+                  Now.
+               </div>
+               <form action="/checkout" method="post" novalidate="novalidate" id="paymentForm">	
+               <!-- <form id="paymentForm" method="post" action="pay" autocomplete="off" novalidate="novalidate"> id="checkout-form"  -->
+                  <input name="txtid" value="23b515dfdf0161ee2396ba143e118c2a" type="hidden"> <input name="window3DUsed" value="" id="window3DUsed" type="hidden"> <input name="paymentparams" id="paymentparams" type="hidden">
+
+                  <div id="payment-tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-tabs-vertical">
+                     <ul class="clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" id="TriggerBlock" style="min-height: 443px;">
+                        <li data-cat="creditcard" class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active ui-state-focus"><a class="first" id="creditlink" href="#credit">Credit Card</a> <span class="white"></span></li>
+   
+                        <li data-cat="lazypay" class="ui-state-default ui-corner-top"><a class="first lazypaylink" id="lazypaylink" href="#lazypay">Cash on Delivery</a> <span class="white"></span></li>
+
+                     </ul>
+                     <div id="credit" class="pcpPanel ui-tabs-panel ui-widget-content ui-corner-bottom" style="min-height: 443px;">
+                        <div class="info-container notify-currency"></div>
+                        <div id="payment-box" class="payment-box">
+                           <fieldset class="credit-card-form prepend-1 prepend-top">
+                              <p id="card-radios" class="card-radio card-options">
+                                 <label class="span-3 " style="padding-top: 12px;">Card Type</label>
+                                 <label class="card_blck1"><input style="float: left; margin-right: 2px; margin-top: 13px;" class="required show-cc-form payment_card_type" card_type="CC" name="ccard-type" value="1" checked="checked" id="credit-card" type="radio">
+                                 <img class="card" src="PayUbiz_files/visa-master_card.jpg" width="99" height="28"> </label>
+                                 <label class="card_blck2"><input style="float: left; margin-right: 2px; margin-top: 13px;" class="required hide-cc-form payment_card_type" card_type="AMEX" name="ccard-type" value="5" id="amex-cards" type="radio">
+                                 <img class="card" src="PayUbiz_files/pay-american.jpg" width="50" height="28"> </label>
+                                 <label class="card_blck3"><input style="float: left; margin-right: 2px; margin-top: 13px;" class="required hide-cc-form payment_card_type" card_type="RUPAYCC" name="ccard-type" value="6" id="rupay-credit-card" type="radio">
+                                 <img class="card" src="PayUbiz_files/rupay-logo-small.png" style="margin-top: 6px;" width="59" height="16"> </label>
+                                 <label class="card_blck3"><input style="float: left; margin-right: 2px; margin-top: 13px;" class="required hide-cc-form payment_card_type" card_type="DINR" name="ccard-type" value="4" id="diners" type="radio">
+                                 <img class="card" src="PayUbiz_files/pay-diners.jpg" width="50" height="28"> </label>
+                              </p>
+                              <fieldset class="cc-select-form">
+                                 <div id="user-card-radios" class="row user-card-options hidden">
+                                    <label class="span-3" style="padding-top: 6px" for="cname_on_card">Select your card</label>
+                                    <div class="payuCardDropDown select">
+                                       <div class="drop" style="display: block;" id="drop_list_1">
+                                          <div class="drop_inner price_a_trip">
+                                             <ul>
+                                                <li><a class="payment_title payment_card_type" card_type="CC" rel="1" href="javascript:void(0);"> <img src="PayUbiz_files/visa-master_card.gif" alt="" height="25"> <small>Visa | Master</small>
+                                                   </a>
+                                                </li>
+
+                                                <li><a class="payment_title payment_card_type" card_type="RUPAYCC" rel="7" href="javascript:void(0);"> <img src="PayUbiz_files/pay-rupay.jpg" alt="" height="25"> <small>Rupay Credit Card</small>
+                                                   </a>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="javascript:void(0);" class="drop_image" id="drop_image_1"></a> <span class="slected" id="drop_box_1">Select one</span>
+                                    </div>
+                                 </div>
+                              </fieldset>
+                              <fieldset class="cc-form" style="">
+                                 <div class="row">
+                                    <label class="span-3" for="ccard_number">Card Number</label>
+                                    <input name="ccard_number" class="required creditcard text" maxlength="25" id="ccard_number" autocomplete="off" type="text">
+                                    <span class="cvv_help"><a id="storeCardLink" class="help-link str_crd" href="#">Store this card</a></span>
+                                    <span class="cvv_help hidden"><a id="manageCardLink" class="help-link str_crd" href="#">Manage this card</a></span>
+                                 </div>
+                                 <div class="row">
+                                    <label class="span-3" for="cname_on_card">Name on Card</label>
+                                    <input name="cname_on_card" class="text req" id="cname_on_card" maxlength="50" autocomplete="off" type="text">
+                                 </div>
+                                 <div class="row">
+                                    <label class="span-3" for="ccvv_number">CVV Number</label>
+                                    <input name="ccvv_number" class="required validccvv digits password" maxlength="3" id="ccvv_number" pattern="[0-9]*" autocomplete="off" type="password">
+                                    <span class="cvv_help"> <span class="help-link overlay_img">What
+                                    is CVV number?</span></span>
+                                 </div>
+                                 <p class="dropdowns">
+                                    <label class="span-3">Expiry Date</label> <span class="hide-ccExpiry hidden" style="font-size: 13px; width: 224px; float: left; font-weight: bold; line-height: 28px; padding: 5px 0px;"><img src="PayUbiz_files/disable_select_month.jpg"><img src="PayUbiz_files/disable_select_year.jpg" style="clear: none; margin-left: 5px"> </span> 
+                                    <select id="cexpiry_date_month" name="cexpiry_date_month">
+                                       <option value="" selected="selected">Month</option>
+                                       <option value="01">Jan (1)</option>
+                                       <option value="02">Feb (2)</option>
+                                       <option value="03">Mar (3)</option>
+                                       <option value="04">Apr (4)</option>
+                                       <option value="05">May (5)</option>
+                                       <option value="06">Jun (6)</option>
+                                       <option value="07">Jul (7)</option>
+                                       <option value="08">Aug (8)</option>
+                                       <option value="09">Sep (9)</option>
+                                       <option value="10">Oct (10)</option>
+                                       <option value="11">Nov (11)</option>
+                                       <option value="12">Dec (12)</option>
+                                    </select>
+                                    <select id="cexpiry_date_year" name="cexpiry_date_year">
+                                       <option value="" selected="selected">Year</option>
+                                       <option value="2018">
+                                          2018                        
+                                       </option>
+                                       <option value="2019">
+                                          2019                        
+                                       </option>
+                                       <option value="2020">
+                                          2020                        
+                                       </option>
+                                       <option value="2021">
+                                          2021                        
+                                       </option>
+                                       <option value="2022">
+                                          2022                        
+                                       </option>
+                                       <option value="2023">
+                                          2023                        
+                                       </option>
+                                       <option value="2024">
+                                          2024                        
+                                       </option>
+                                       <option value="2025">
+                                          2025                        
+                                       </option>
+                                       <option value="2026">
+                                          2026                        
+                                       </option>
+                                       <option value="2027">
+                                          2027                        
+                                       </option>
+                                       <option value="2028">
+                                          2028                        
+                                       </option>
+                                       <option value="2029">
+                                          2029                        
+                                       </option>
+                                       <option value="2030">
+                                          2030                        
+                                       </option>
+                                       <option value="2031">
+                                          2031                        
+                                       </option>
+                                       <option value="2032">
+                                          2032                        
+                                       </option>
+                                       <option value="2033">
+                                          2033                        
+                                       </option>
+                                       <option value="2034">
+                                          2034                        
+                                       </option>
+                                       <option value="2035">
+                                          2035                        
+                                       </option>
+                                       <option value="2036">
+                                          2036                        
+                                       </option>
+                                       <option value="2037">
+                                          2037                        
+                                       </option>
+                                       <option value="2038">
+                                          2038                        
+                                       </option>
+                                       <option value="2039">
+                                          2039                        
+                                       </option>
+                                       <option value="2040">
+                                          2040                        
+                                       </option>
+                                       <option value="2041">
+                                          2041                        
+                                       </option>
+                                       <option value="2042">
+                                          2042                        
+                                       </option>
+                                       <option value="2043">
+                                          2043                        
+                                       </option>
+                                       <option value="2044">
+                                          2044                        
+                                       </option>
+                                       <option value="2045">
+                                          2045                        
+                                       </option>
+                                       <option value="2046">
+                                          2046                        
+                                       </option>
+                                       <option value="2047">
+                                          2047                        
+                                       </option>
+                                       <option value="2048">
+                                          2048                        
+                                       </option>
+                                       <option value="2049">
+                                          2049                        
+                                       </option>
+                                       <option value="2050">
+                                          2050                        
+                                       </option>
+                                       <option value="2051">
+                                          2051                        
+                                       </option>
+                                       <option value="2052">
+                                          2052                        
+                                       </option>
+                                       <option value="2053">
+                                          2053                        
+                                       </option>
+                                       <option value="2054">
+                                          2054                        
+                                       </option>
+                                       <option value="2055">
+                                          2055                        
+                                       </option>
+                                       <option value="2056">
+                                          2056                        
+                                       </option>
+                                       <option value="2057">
+                                          2057                        
+                                       </option>
+                                       <option value="2058">
+                                          2058                        
+                                       </option>
+                                       <option value="2059">
+                                          2059                        
+                                       </option>
+                                       <option value="2060">
+                                          2060                        
+                                       </option>
+                                       <option value="2061">
+                                          2061                        
+                                       </option>
+                                       <option value="2062">
+                                          2062                        
+                                       </option>
+                                       <option value="2063">
+                                          2063                        
+                                       </option>
+                                       <option value="2064">
+                                          2064                        
+                                       </option>
+                                       <option value="2065">
+                                          2065                        
+                                       </option>
+                                       <option value="2066">
+                                          2066                        
+                                       </option>
+                                       <option value="2067">
+                                          2067                        
+                                       </option>
+                                       <option value="2068">
+                                          2068                        
+                                       </option>
+                                    </select>
+                                 </p>
+                                 <div class="row mcp_cont" id="mcp_creditcard"></div>
+                              </fieldset>
+                           </fieldset>
+                           <fieldset class="cc-form credit-card-form prepend-top top-border" style="">
+                              <label class="span-4"></label>
+                              <div class="chk_outer" style="">
+                              </div>
+                              <div class="card-name hidden">
+                                 <label class="span-4" style="margin-right: 3px"></label> <input name="ccard-name" class="text left onlyAlphaNumSpaceUnderScore validateStoreCardName" style="margin-right: 2px" maxlength="32" id="ccard_name" autocomplete="off" placeholder="e.g. myname_bank" type="text">
+                                 <p style="float: left !important; width: 90% !important; text-align: center; margin: 0">Type
+                                    a custom label to save this card (optional)
+                                 </p>
+                              </div>
+                           </fieldset>
+                           <div style="clear: both;"></div>
+                           <div class="pg_down_div" style="display:none;  margin-top:15px;" id="credit_card_error_div">
+                              <div class="nb_m" id="credit_card_down">
+                                 We are experiencing high failure rate for <span class="CreditCardBankName"></span>
+                                 cards currently. You can still use it, however we recommend
+                                 that you pay using any other payment method.
+                              </div>
+                              <div class="nb_f sms" id="show_notification_credit" style="display:none;">
+                                 <p class="labl">
+                                    Want to recieve SMS when <span class="CreditCardBankName"></span>
+                                    is up again?
+                                 </p>
+                                 <p class="inpt">
+                                    <input class="txt91" readonly="readonly" placeholder="+91" type="text"><input class="txt mobile_number" onkeydown="removeError('mobile_number',event,'pg_down_input_error');return numbersOnly(event);" maxlength="10" name="mobile_number" placeholder="Your Mobile Number" value="9502385856" type="text"><input class="GatewayDownErrorSubmit btn" data-down-type="CC" data-parent-id="credit_card_error_div" data-type="sms" value="Notify Me" type="button">
+                                 </p>
+                                 <p class="btm">
+                                    or <a class="change_type" data-type="email" href="javascript:void(0);">Add your email</a> to get
+                                    notification in your inbox.
+                                 </p>
+                              </div>
+                              <div class="nb_f email" style="display: none;">
+                                 <p class="labl">
+                                    Want to recieve email when <span class="CreditCardBankName"></span>
+                                    up again?
+                                 </p>
+                                 <p class="inpt">
+                                    <input class="txt email_address" onkeydown="removeError('email_address',event,'pg_down_input_error');" name="email_address" placeholder="Your Email" value="regularshow33@hotmail.com" type="text"> <input class="GatewayDownErrorSubmit btn" data-down-type="CC" data-parent-id="credit_card_error_div" data-type="email" value="Notify Me" type="button">
+                                 </p>
+                                 <p class="btm">
+                                    or <a class="change_type" href="javascript:void(0);" data-type="sms">Add your mobile number</a> to get SMS alert.
+                                 </p>
+                              </div>
+                              <div class="nb_f thankyou_note" style="display: none;">
+                                 <p>Thanks! We will inform you as soon as the payment option is
+                                    back up.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <span style="clear: both"></span>
+                        <div class="payment-buttons append-bottom">
+							<button type="submit" class="btn btn-success">Pay Now</button>
+                           <!-- <input name="pay_button" style="margin-right: 75px;" value="Pay Now" onclick="form_params();" class=" credit_pay_button" id="pay_button" type="submit"> -->
+                        </div>
+                     </div>
+                     <div id="debit" class="pcpPanel ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" style="min-height: 443px;">
+                        <div class="info-container notify-currency"></div>
+                        <div id="payment-box" class="payment-box">
+                           <fieldset class="debit-card-form prepend-1 prepend-top">
+                              <p class="card-options">
+                                 <label class="span-3" for="debit_card_select">Select debit
+                                 card</label> 
+                                 <select class="required" id="debit_card_select" name="debit_card_select" onchange="select_debitcard(this.value);" style="width: 195px;" disabled="disabled">
+                                    <option value="" selected="selected">Select Debit Card Type</option>
+                                    <option value="debitcard_MAES_1">Other Maestro Cards</option>
+                                    <option value="debitcard_SMAE_1">State Bank Maestro Cards</option>
+                                    <option value="debitcard_CITD_1">CITI Debit Card</option>
+                                    <option value="debitcard_MAST_1">MasterCard Debit Cards (All Banks)</option>
+                                    <option value="debitcard_RUPAY_1">RuPay Debit Card</option>
+                                    <option value="debitcard_VISA_1">Visa Debit Cards (All Banks)</option>
+                                 </select>
+                              </p>
+                              <fieldset class="cc-form cc-dc-form" style="display: block;">
+                                 <div class="row user-card-options hidden">
+                                    <label class="span-3" for="cname_on_card">Select your card</label>
+                                    <div class="payuCardDropDown select">
+                                       <div class="drop" style="display: block;" id="drop_list_2">
+                                          <div class="drop_inner price_a_trip">
+                                             <ul>
+                                                <li><a class="payment_title" rel="debitcard_MAES_1" href="javascript:void(0);"> <small>Other Maestro Cards                                </small>
+                                                   </a>
+                                                </li>
+                                                <li><a class="payment_title" rel="debitcard_SMAE_1" href="javascript:void(0);"> <small>State Bank Maestro Cards                               </small>
+                                                   </a>
+                                                </li>
+                                                <li><a class="payment_title" rel="debitcard_CITD_1" href="javascript:void(0);"> <small>CITI Debit Card                                </small>
+                                                   </a>
+                                                </li>
+                                                <li><a class="payment_title" rel="debitcard_MAST_1" href="javascript:void(0);"> <small>MasterCard Debit Cards (All Banks)                               </small>
+                                                   </a>
+                                                </li>
+                                                <li><a class="payment_title" rel="debitcard_RUPAY_1" href="javascript:void(0);"> <small>RuPay Debit Card                                </small>
+                                                   </a>
+                                                </li>
+                                                <li><a class="payment_title" rel="debitcard_VISA_1" href="javascript:void(0);"> <small>Visa Debit Cards (All Banks)                               </small>
+                                                   </a>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                       <a href="javascript:void(0);" class="drop_image" id="drop_image_2"></a> <span class="slected" id="drop_box_2">Select one</span>
+                                    </div>
+                                 </div>
+                                 <fieldset class="dc-form hidden">
+                                    <div class="row">
+                                       <label class="span-3" for="dcard_number">Card Number</label>
+                                       <input name="dcard_number" class="required creditcard debitcard text" maxlength="25" id="dcard_number" autocomplete="off" disabled="disabled" type="text">
+                                       <span class="cvv_help"><a id="storeDebitCardLink" class="help-link str_crd" href="#">Store this card</a></span>
+                                       <span class="cvv_help hidden"><a id="manageDebitCardLink" class="help-link str_crd" href="#">Manage this card</a></span>
+                                    </div>
+                                    <div class="row">
+                                       <label class="span-3" for="dname_on_card">Name on Card</label>
+                                       <input name="dname_on_card" class="text req" id="dname_on_card" maxlength="50" autocomplete="off" disabled="disabled" type="text">
+                                    </div>
+                                    <div class="cvvExpLabel" id="dcvvExpLabel">
+                                       <div class="row">
+                                          <label class="span-3 cvvExp" for="dcvv_number" style="color: rgb(68, 68, 68);">CVV Number</label>
+                                          <input name="dcvv_number" class="required validccvv digits password" maxlength="3" id="dcvv_number" pattern="[0-9]*" autocomplete="off" type="password">
+                                          <span class="cvv_help"> <span class="help-link overlay_img visa_img">What is CVV number?</span>
+                                          </span>
+                                       </div>
+                                       <p class="dropdowns">
+                                          <label class="span-3 cvvExp" style="color: rgb(68, 68, 68);">Expiry Date</label> <span class="hide-dcExpiry hidden" style="font-size: 13px; float: left; font-weight: bold; line-height: 28px; padding: 5px 0px;"><img src="PayUbiz_files/disable_select_month.jpg"><img src="PayUbiz_files/disable_select_year.jpg" style="clear: none; margin-left: 5px"> </span> 
+                                          <select id="dexpiry_date_month" name="dexpiry_date_month">
+                                             <option value="" selected="selected">Month</option>
+                                             <option value="01">Jan (1)</option>
+                                             <option value="02">Feb (2)</option>
+                                             <option value="03">Mar (3)</option>
+                                             <option value="04">Apr (4)</option>
+                                             <option value="05">May (5)</option>
+                                             <option value="06">Jun (6)</option>
+                                             <option value="07">Jul (7)</option>
+                                             <option value="08">Aug (8)</option>
+                                             <option value="09">Sep (9)</option>
+                                             <option value="10">Oct (10)</option>
+                                             <option value="11">Nov (11)</option>
+                                             <option value="12">Dec (12)</option>
+                                          </select>
+                                          <select id="dexpiry_date_year" name="dexpiry_date_year">
+                                             <option value="" selected="selected">Year</option>
+                                             <option value="2018">
+                                                2018                            
+                                             </option>
+                                             <option value="2019">
+                                                2019                            
+                                             </option>
+                                             <option value="2020">
+                                                2020                            
+                                             </option>
+                                             <option value="2021">
+                                                2021                            
+                                             </option>
+                                             <option value="2022">
+                                                2022                            
+                                             </option>
+                                             <option value="2023">
+                                                2023                            
+                                             </option>
+                                             <option value="2024">
+                                                2024                            
+                                             </option>
+                                             <option value="2025">
+                                                2025                            
+                                             </option>
+                                             <option value="2026">
+                                                2026                            
+                                             </option>
+                                             <option value="2027">
+                                                2027                            
+                                             </option>
+                                             <option value="2028">
+                                                2028                            
+                                             </option>
+                                             <option value="2029">
+                                                2029                            
+                                             </option>
+                                             <option value="2030">
+                                                2030                            
+                                             </option>
+                                             <option value="2031">
+                                                2031                            
+                                             </option>
+                                             <option value="2032">
+                                                2032                            
+                                             </option>
+                                             <option value="2033">
+                                                2033                            
+                                             </option>
+                                             <option value="2034">
+                                                2034                            
+                                             </option>
+                                             <option value="2035">
+                                                2035                            
+                                             </option>
+                                             <option value="2036">
+                                                2036                            
+                                             </option>
+                                             <option value="2037">
+                                                2037                            
+                                             </option>
+                                             <option value="2038">
+                                                2038                            
+                                             </option>
+                                             <option value="2039">
+                                                2039                            
+                                             </option>
+                                             <option value="2040">
+                                                2040                            
+                                             </option>
+                                             <option value="2041">
+                                                2041                            
+                                             </option>
+                                             <option value="2042">
+                                                2042                            
+                                             </option>
+                                             <option value="2043">
+                                                2043                            
+                                             </option>
+                                             <option value="2044">
+                                                2044                            
+                                             </option>
+                                             <option value="2045">
+                                                2045                            
+                                             </option>
+                                             <option value="2046">
+                                                2046                            
+                                             </option>
+                                             <option value="2047">
+                                                2047                            
+                                             </option>
+                                             <option value="2048">
+                                                2048                            
+                                             </option>
+                                             <option value="2049">
+                                                2049                            
+                                             </option>
+                                             <option value="2050">
+                                                2050                            
+                                             </option>
+                                             <option value="2051">
+                                                2051                            
+                                             </option>
+                                             <option value="2052">
+                                                2052                            
+                                             </option>
+                                             <option value="2053">
+                                                2053                            
+                                             </option>
+                                             <option value="2054">
+                                                2054                            
+                                             </option>
+                                             <option value="2055">
+                                                2055                            
+                                             </option>
+                                             <option value="2056">
+                                                2056                            
+                                             </option>
+                                             <option value="2057">
+                                                2057                            
+                                             </option>
+                                             <option value="2058">
+                                                2058                            
+                                             </option>
+                                             <option value="2059">
+                                                2059                            
+                                             </option>
+                                             <option value="2060">
+                                                2060                            
+                                             </option>
+                                             <option value="2061">
+                                                2061                            
+                                             </option>
+                                             <option value="2062">
+                                                2062                            
+                                             </option>
+                                             <option value="2063">
+                                                2063                            
+                                             </option>
+                                             <option value="2064">
+                                                2064                            
+                                             </option>
+                                             <option value="2065">
+                                                2065                            
+                                             </option>
+                                             <option value="2066">
+                                                2066                            
+                                             </option>
+                                             <option value="2067">
+                                                2067                            
+                                             </option>
+                                             <option value="2068">
+                                                2068                            
+                                             </option>
+                                          </select>
+                                       </p>
+                                    </div>
+                                    <div id="enableDisableDiv">
+                                       <div class="enableDisableCvvExp row" id="enableCvvExpDiv" style="display: none;">
+                                          <div class="span-3">&nbsp;</div>
+                                          <a href="javascript:void(0);"><b>Undo</b> if you do have a
+                                          CVV number and expiry date on card</a>
+                                       </div>
+                                       <div class="enableDisableCvvExp row" id="disableCvvExpDiv" style="display: none;">
+                                          <div class="span-3">&nbsp;</div>
+                                          <a href="javascript:void(0);"><b>Click here </b> <span class="dot">.</span> I don't have a CVV number and expiry
+                                          date on card</a>
+                                       </div>
+                                       <div class="enableDisableCvvExp row" id="enableCvvExpDivSBI" style="display: none;">
+                                          <div class="span-3">&nbsp;</div>
+                                          <a href="javascript:void(0);"><b>Click here</b> if you do
+                                          have a CVV number and expiry date on card</a>
+                                       </div>
+                                       <div class="enableDisableCvvExp row" id="disableCvvExpDivSBI" style="display: none;">
+                                          <div class="span-3">&nbsp;</div>
+                                          <a href="javascript:void(0);"><b>Undo </b> <span class="dot">.</span> I don't have a CVV number and expiry
+                                          date on card</a>
+                                       </div>
+                                    </div>
+                                    <div class="row mcp_cont" id="mcp_debitcard"></div>
+                                 </fieldset>
+                              </fieldset>
+                           </fieldset>
+                           <fieldset id="dcSaveCardDetails" class="dc-save debit-card-form prepend-top top-border hidden" style="display: none;">
+                              <label class="span-3"></label>
+                              <div class="chk_outer" style="">
+                                 <p class="  text">
+                                    <input class="checkbox" name="store-card" id="storeDebitCard" disabled="disabled" type="checkbox">
+                                    Save these details securely for next transaction.                     <a class="learn-more" href="javascript:void(0);"><img src="PayUbiz_files/lock1.gif" width="14px">
+                                    Learn more</a>
+                                 </p>
+                              </div>
+                              <div class="debit-card-name hidden">
+                                 <label class="span-4" style="margin-right: 3px"></label> <input name="dcard-name" class="text left onlyAlphaNumSpaceUnderScore validateStoreCardName" style="margin-right: 2px" maxlength="32" id="dcard_name" autocomplete="off" placeholder="e.g. myname_bank" disabled="disabled" type="text">
+                                 <p style="float: left !important; width: 90% !important; text-align: center; margin: 0">Type
+                                    a custom label to save this card (optional)
+                                 </p>
+                              </div>
+                           </fieldset>
+                           <div style="clear: both;"></div>
+                           <div class="pg_down_div" id="debit_card_error_div" style="display:none;  margin-top:15px;">
+                              <div class="nb_m">
+                                 We are experiencing high failure rate for <span class="DebitCardBankName"></span>
+                                 cards currently. You can still use it, however we recommend
+                                 that you pay using any other payment method.
+                              </div>
+                              <div class="nb_f sms" id="show_notification_debit" style="display:none;">
+                                 <p class="labl">
+                                    Want to receive SMS when <span class="DebitCardBankName"></span>
+                                    is up again?
+                                 </p>
+                                 <p class="inpt">
+                                    <input class="txt91" readonly="readonly" placeholder="+91" disabled="disabled" type="text"><input onkeydown="removeError('mobile_number',event,'pg_down_input_error');return numbersOnly(event);" maxlength="10" class="txt mobile_number" name="mobile_number" placeholder="Your Mobile Number" value="9502385856" disabled="disabled" type="text"><input class="GatewayDownErrorSubmit btn" data-down-type="DC" data-parent-id="debit_card_error_div" data-type="sms" value="Notify Me" disabled="disabled" type="button">
+                                 </p>
+                                 <p class="btm">
+                                    or <a class="change_type" data-type="email" href="javascript:void(0);">Add your email</a> to get
+                                    notification in your inbox.
+                                 </p>
+                              </div>
+                              <div class="nb_f email" style="display: none;">
+                                 <p class="labl">
+                                    Want to receive email when <span class="DebitCardBankName"></span>
+                                    up again?
+                                 </p>
+                                 <p class="inpt">
+                                    <input class="txt email_address" onkeydown="removeError('email_address',event,'pg_down_input_error');" name="email_address" placeholder="Your Email" value="regularshow33@hotmail.com" disabled="disabled" type="text"> <input class="GatewayDownErrorSubmit btn" data-down-type="DC" data-parent-id="debit_card_error_div" data-type="email" value="Notify Me" disabled="disabled" type="button">
+                                 </p>
+                                 <p class="btm">
+                                    or <a class="change_type" href="javascript:void(0);" data-type="sms">Add your mobile number</a> to get SMS alert.
+                                 </p>
+                              </div>
+                              <div class="nb_f thankyou_note" style="display: none;">
+                                 <p>Thanks! We will inform you as soon as the payment option is
+                                    back up.
+                                 </p>
+                              </div>
+                           </div>
+                           <p id="dc_msg_disp" class="p-endnote prepend-top prepend-1 " style="display: none">
+                              <span>Note:</span> In the next step you will be redirected to
+                              your bank's website to verify yourself.
+                           </p>
+                        </div>
+                        <span style="clear: both"></span>
+
+                     </div>
+
+                     <style type="text/css">
+                        .lazypay{
+                        width:100%;
+                        }
+                        .lazypay .lazypay-box {
+                        width: 100%;
+                        }
+                        .lazypay .lazypay-box .lazypay-content {
+                        margin: 0 auto;
+                        }
+                        .lazypay input{
+                        width: 207px !important;
+                        }
+                        .lazypay p.bold{
+                        font-weight: bold !important;
+                        }
+                        .lazypay .resend-otp-link{
+                        margin-left: 150px;
+                        }
+                     </style>
+                     <div id="lazypay" class="lazypay  pcpPanel lazypay ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" style="min-height: 443px;">
+                        <div class="form-container">
+                           <div id="lazypay-box" class="lazypay-box col-sm-offset-2">
+                              <div class="form-container">
+                                 <p id="error_container" class="error pm-col-sm-8 vert-offset-top-1 hidden"></p>
+                                 <p id="success_container" class="success pm-col-sm-8 vert-offset-top-1 hidden"></p>
+                                 <fieldset id="lazypay-details" class="vert-offset-top-2">
+
+                                    <div class="input-container row vert-offset-top-2">
+                                       <label class="pm-col-sm-2"> &nbsp; </label>
+                                       <button type="submit" class="btn btn-success">Confirm</button>
+                                    </div>
+                                    <div class="row vert-offset-top-1">
+                                       <label class="pm-col-sm-2"> &nbsp; </label>
+                                    </div>
+   
+                                    <input id="mihpayid" value="23b515dfdf0161ee2396ba143e118c2a" disabled="disabled" type="hidden">
+                                    <input id="lazypay_type" value="" disabled="disabled" type="hidden">
+                                 </fieldset>
+                                 <fieldset id="lazypay-otp" class="vert-offset-top-2 hidden">
+                                    <div class="input-container row">
+                                       <label class="pm-col-sm-2 caption"> </label>
+                                       <div class="custom-input pm-col-sm-7 float-left">
+                                          <p id="otp-message" class="bold"></p>
+                                          <p id="otp-attempt" class="bold"></p>
+                                       </div>
+                                    </div>
+                                    <div class="input-container row">
+                                       <label class="pm-col-sm-2 caption"> OTP </label>
+                                       <div class="custom-input pm-col-sm-9 float-left">  
+                                          <input name="lazypay_otp" id="lazypay_otp" class="required text" disabled="disabled" type="password">
+                                       </div>
+                                    </div>
+                                    <div class="input-container row">
+                                       <label class="pm-col-sm-2 caption"> </label>
+                                       <div class="custom-input pm-col-sm-9 float-left">  
+                                          <a class="resend-otp-link" href="javascript:void(0);" onclick="paymentLazyPay.resendOTP()"> Resend OTP</a>
+                                       </div>
+                                    </div>
+                                    <div class="input-container row vert-offset-top-2">
+                                       <label class="pm-col-sm-2"> &nbsp; </label>
+                                       <button id="check-otp" type="button" class="pm-btn pm-btn-primary pm-col-sm-4 " onclick="paymentLazyPay.checkOTP()">
+                                       Proceed
+                                       </button>
+                                    </div>
+                                    <div class="row vert-offset-top-1">
+                                       <label class="pm-col-sm-2"> &nbsp; </label>
+                                    </div>
+                                    <input id="lazypay_type" value="" disabled="disabled" type="hidden">
+                                    <input id="lazypay_status" value="" disabled="disabled" type="hidden">
+                                 </fieldset>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </form>
+            </div>
+            <div class="clear"></div>
+         </div>
+      </div>
+      <div id="processing" style="background-color: #FFFFFF; color: #999 !important;" class="  message append-bottom append-1  hidden">
+         <div class="append-bottom processing ">We are processing your
+            transaction...
+         </div>
+         <img src="PayUbiz_files/ajax-loader-new.gif"><br>
+         <p class="prepend-top prepend-2 append-2" style="text-align: center;">This
+            process might take some time. Please do not hit refresh or back button
+            or close this window.
+         </p>
+      </div>
+
+      <div class="clear"></div>
+      <div class="disclaimer">
+
+      </div>
+      <div>
+         <div id="backBlackScreen" style="background: #f8f8f8 !important; position: fixed; z-index: 10; opacity: 0.5; left: 0; top: 0; width: 100%; height: 100%; display: none; -ms-filter: alpha(opacity = 50); filter: alpha(opacity = 50);"></div>
+         <div id="backBlackScreenMsg" style="background: #000 !important; position: fixed; z-index: 10; opacity: 0.5; left: 0; top: 0; width: 100%; height: 100%; display: none; -ms-filter: alpha(opacity = 50); filter: alpha(opacity = 50);"></div>
+      </div>
+      <div class="win_3d_load_bx loading_bx_wo_lock" style="display: none; height: 110px !important">
+         <br>
+         <div class="load_image_process">
+            <img src="PayUbiz_files/loading_img.gif" alt="" width="24">
+         </div>
+         <p class="opening3dMsg" valign="middle">
+            <span id="popupmsg" style="font-size: 15px; font-weight: bold;">&nbsp;Please
+            enter your card authentication details in the new window <br> that
+            appeared on your screen.
+            </span> <br> Please do not refresh the page or click the "back button"
+            or close the browser window. <br> <br>
+         </p>
+         <p class="timer_expired" valign="middle" style="display: none;">
+            <b style="font-size: 17px;">&nbsp;Timer Expired!</b><br> We are
+            verifying status of your transaction with the bank.&nbsp;Please
+            wait... <br> <br>
+         </p>
+         <p class="bank_verify" valign="middle" style="display: none;">
+            <b style="font-size: 17px;">&nbsp;Transaction interrupted!</b><br> We
+            are verifying status of your transaction with the bank.&nbsp;Please
+            wait... <br> <br>
+         </p>
+      </div>
+      <div id="kredTncModal" class="kredTncModal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <span id="tncmodalclose" class="close">×</span>
+            <h3>Terms and Conditions</h3>
+            <p class="heading"><strong>I understand and agree to explicitly permit the
+               merchant, PayU, PayU’s associate and any third party to </strong>
+            </p>
+            <ol>
+               <li>Access my information such as name, address, previous transaction details, etc. already stored in their
+                  systems.
+               </li>
+               <li>
+                  Collect additional information
+               </li>
+               <li>Analyse, connect and link any other information which may have been collected and/or congregated on the basis of my
+                  name, phone number, email id, card details, transaction details, etc.
+               </li>
+               <li>Process, deal, store, use and/ or share all such information, for 
+                  providing me uninterrupted and satisfactory services; offering new 
+                  features in the existing services that I am availing; offering new 
+                  products/ services; and/or product enhancement,analysis, risk and 
+                  security purposes, communication purpose, etc.
+               </li>
+            </ol>
+         </div>
+      </div>
+      <!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.js"></script>-->
+      <!-- // <script type="text/javascript" src="PayUbiz_files/encrypt.js"></script> -->
+      <!-- // <script type="text/javascript" src="PayUbiz_files/encryptionService.js"></script> -->
+      <!-- <script src="https://static.payu.in/js/jqueryHandlebarPayu.js?version=1"></script>
+         <script src="https://static.payu.in/js/jqueryUiPayu.js?version=1"></script> -->
+      <script src="PayUbiz_files/payment.js"></script>
+      <script src="PayUbiz_files/_jscriptAPI"></script>
+      <script>var serviceTax = '{"default":"18","creditcard":0,"debitcard":0,"emi":0,"amexz":0}'</script>
+      <script src="PayUbiz_files/payment_002.js"></script>
+      <!--<script src="https://static.payu.in/js/new.jquery.validate.min.js"></script>
+         <script src="https://static.payu.in/js/jquery.payment.min.js?version=1.0.9"></script>
+         <script src="https://static.payu.in/js/payuscript.min.js?version=1.6.35"></script>
+         <script src="https://static.payu.in/js/noCostEmiHandler.js?version=1.6.8"></script>
+         <script src="https://static.payu.in/js/placeholder.js?version=1.0"></script>-->
+      <script type="text/javascript">
+         var window3DEnabled = "";
+         var window3DNBEnabled = "";
+         var from = "";
+         
+         jQuery(function ($) {
+          $(".wallet_email input, .wallet_mobile input").placeholder();
+          $("#payment-tabs").tabs({fx:{}}).addClass("ui-tabs-vertical");
+          
+          var pg ="";
+         
+          if(from == 'selfHelpCOD'){
+            jQuery('@[href=#cod]').trigger('click');
+          }
+         
+          
+          if( pg=="" || pg=="CC" ){
+            $('input[name=ccard-type]', document.forms[0]).first().trigger('click').trigger('change');
+          }
+         
+         
+          jQuery("#storeCard").bind(($.browser.msie  && parseInt($.browser.version, 10) === 8) ? 'propertychange' : 'change', function (event) {
+              if(this.checked) {
+                jQuery(".card-name").removeClass('hidden');
+                jQuery("#storeCardLink").html("Undo save");
+              }else {
+                jQuery(".card-name").addClass('hidden');
+                jQuery("#storeCardLink").html("Save this card");
+              }
+             });
+         
+                jQuery("#ecard_number").bind('blur', function(){
+                    checkCardEmiEligibility();
+                });
+         
+                jQuery('#ecard_number').bind('keyup, keypress, keydown', function(event){
+                    window.setTimeout(function(){
+                      getCardEmiEligibility();
+                    });
+                });
+         
+             jQuery("#storeCardLink").click(function (event) {
+              jQuery("#storeCard").trigger('click');
+             });
+         
+             jQuery("#ccard_number , #cname_on_card ").on('keyup change', function() {
+              if(jQuery("#checkOfferTagcc").length && !(jQuery("#checkOffercc").length)){
+                jQuery("#checkOfferTagcc").removeClass().addClass('check_offer');
+                jQuery("#checkOfferTagcc").html('<a id="checkOffercc" href="#" class="help-link" onclick ="checkOfferValidity(); return false;"> Check Offer </a>');
+              }
+             });
+         
+             jQuery("#dcard_number , #dname_on_card, #debit_card_select ").on('keyup change',function() {
+              if(jQuery("#checkOfferTagdc").length  && !(jQuery("#checkOfferdc").length)){
+                jQuery("#checkOfferTagdc").removeClass().addClass('check_offer');
+                jQuery("#checkOfferTagdc").html('<a id="checkOfferdc" href="#" class="help-link" onclick ="checkOfferValidity(); return false;"> Check Offer </a>');
+              }
+             });
+         
+             jQuery("#netbanking_select").on('keyup change',function() {
+              if(jQuery("#checkOfferTagnb").length  && !(jQuery("#checkOffernb").length) && this.value){
+                jQuery("#checkOfferTagnb").removeClass().addClass('check_offer_nb');
+                jQuery("#checkOfferTagnb").html('<a id="checkOffernb" href="#" class="help-link" onclick ="checkOfferValidity(); return false;"> Check Offer </a>');
+              }
+             });
+         
+             jQuery(".cardPayment" ).on('click', function() {
+              if(jQuery(this).parents('#drop_list_1').length) {
+                jQuery("#ccard_number").trigger('change');
+              }
+              if(jQuery(this).parents('#drop_list_2').length) {
+                jQuery("#dcard_number").trigger('change');
+              }
+             });
+         
+             jQuery("#storeDebitCard").bind(($.browser.msie  && parseInt($.browser.version, 10) === 8) ? 'propertychange' : 'change', function (event) {
+              if(this.checked) {
+                jQuery(".debit-card-name").removeClass('hidden');
+                jQuery("#storeDebitCardLink").html("Undo save");
+              } else {
+                jQuery(".debit-card-name").addClass('hidden');
+                jQuery("#storeDebitCardLink").html("Save this card");
+              }
+             });
+             jQuery("#storeDebitCardLink").click(function (event) {
+              jQuery("#storeDebitCard").trigger('click');
+             });
+         
+             jQuery("#storeRewardCard").bind(($.browser.msie  && parseInt($.browser.version, 10) === 8) ? 'propertychange' : 'change', function (event) {
+              if(this.checked) {
+                     jQuery(".reward-card-name").removeClass('hidden');
+                     jQuery("#storeRewardCardLink").html("Undo save");
+              } else {
+                     jQuery(".reward-card-name").addClass('hidden');
+                     jQuery("#storeRewardCardLink").html("Save this card");
+              }
+             });
+         
+             jQuery("#cash_card_select").on('keyup change',function() {
+                 if(jQuery("#checkOfferTagcash").length  && !(jQuery("#checkOffercash").length) && this.value){
+                   jQuery("#checkOfferTagcash").removeClass().addClass('check_offer_nb');
+                   jQuery("#checkOfferTagcash").html('<a id="checkOffercash" href="#" class="help-link" onclick ="checkOfferValidity(); return false;"> Check Offer </a>');
+                 }
+               });
+         
+             jQuery("#storeRewardCardLink").click(function (event) {
+              jQuery("#storeRewardCard").trigger('click');
+             });
+         
+             jQuery("#storeEMICard").bind(($.browser.msie  && parseInt($.browser.version, 10) === 8) ? 'propertychange' : 'change', function (event) {
+                if(this.checked) {
+                  jQuery(".emi-card-name").removeClass('hidden');
+                  jQuery("#storeEMICardLink").html("Undo save");
+                } else {
+                  jQuery(".emi-card-name").addClass('hidden');
+                  jQuery("#storeEMICardLink").html("Save this card");
+                }
+              });
+         
+              jQuery("#storeEMICardLink").click(function (event) {
+                jQuery("#storeEMICard").trigger('click');
+              });
+         
+              jQuery(document.forms[0]).bind('reset', function () {
+                jQuery("#storeDebitCard,#storeCard").trigger('change');
+              });
+         
+              jQuery('.learn-more').click(function() {$('#backBlackScreen').show();$('#learn_more').dialog('open');});
+         
+              jQuery('#manageCardLink, #manageDebitCardLink, #manageRewardCardLink').click(function () {
+                var payuCards = PayU.getUserCards();
+                var source = jQuery('#manageCardDetailTemplate').html();
+                var template = Handlebars.compile(source);
+                var html = template(payuCards[window.cardToken]);
+                jQuery("#manageCardDetails").html(html);
+                $('#backBlackScreen').show();
+                $('#manage_card').dialog('open');
+              });
+         
+              jQuery("#manageCardRemove").click(function () {
+                var element = jQuery("a.cardPayment.payment_title[rel="+window.cardToken+"]");
+                PayU.removeUserCard(window.cardToken, function (data) {
+                result = jQuery.parseJSON(data);
+                if(result['result'] === "Card deleted") {
+                  // remove card from UI also
+                  jQuery('#manageCardCancel').trigger('click');
+                  element.parent().next().find("a.payment_title").trigger("click");
+                  element.remove();
+                  delete window.cardToken;
+                  delete window.ibibo_code;
+                }
+                });
+          });
+         
+          $('#manage_card, #learn_more').bind('dialogclose', function(event) {
+            $('#backBlackScreen').hide();
+          });
+         
+          jQuery('#manageCardCancel').click(function () {$('#backBlackScreen').hide();$('#manage_card').dialog('close');});
+          jQuery("#manage_card").dialog({effect: 'drop', direction: "up", autoOpen: false,modal: true, width: 'auto', resizable: false, draggable: false});
+          jQuery('#learn_more').dialog({effect: 'drop', direction: "up", autoOpen: false,modal: true, width: 'auto', resizable: false, draggable: false});
+          jQuery('#learn-more_close-btn').click(function() {$('#learn_more').dialog('close');$('#backBlackScreen').hide();});
+              var dH = $("#TriggerBlock").height();
+          $("#TriggerBlock a").click(function(){
+            var cH = $($(this).attr("href")).height();
+            $("#TriggerBlock").css("min-height", Math.max(dH, cH));
+            $($(this).attr("href")).css('min-height', Math.max(dH, cH));
+         
+              //Remove other tabs mcp html created on creditcard blur
+              var thisTab = $(this).attr('href');
+         
+              //reset mcp related changes on tab change
+              $(".mcp_cont").html('');            
+                 resetToBase(undefined, 'initialValues'); //tabChange param ensures reset wont happen according DCC but to the most earliest page load default 
+         
+            
+          });
+         
+          $("#debit_card_select").change(function(){
+            var cH = $("#debit").height();
+            $("#TriggerBlock").css("min-height", Math.max(dH, cH));
+            $("#debit").css('min-height', Math.max(dH, cH));
+          });
+         
+         
+          var upiH = $("#upi").height();
+          $("#TriggerBlock").css("min-height", Math.max(dH, upiH));
+          $("#upi").css('min-height', Math.max(dH, upiH));
+          $(".upi-container").css('min-height', Math.max(dH, upiH));
+         
+          $('.lrn-btn').hover(upiLearnHover, upiLearnBlur);
+         
+          function upiLearnHover() {      
+            $('.'+$(this).attr('id')).css('display', 'block');
+          }
+         
+          function upiLearnBlur() {
+            $('.'+$(this).attr('id')).css('display', 'none');
+          }
+         
+          $("#rewards_card_select").change(function(){
+            var cH = $("#rewards").height();
+            $("#TriggerBlock").css("min-height", Math.max(dH, cH));
+            $("#rewards").css('min-height', Math.max(dH, cH));
+          });
+         
+          $(".emiOptionsList").change(function(){
+            var cH = $("#emi").height();
+            $("#TriggerBlock").css("min-height", Math.max(dH, cH));
+            $("#emi").css('min-height', Math.max(dH, cH));
+          });
+         
+          $("#cash_card_select").change(function(){
+            var cH = $("#cashcard").height();
+            $("#TriggerBlock").css("min-height", Math.max(dH, cH));
+            $("#cashcard").css('min-height', Math.max(dH, cH));
+          });
+         
+          $("#netbanking_select").change(function(){
+            var cH = $("#netbanking").height();
+            $("#TriggerBlock").css("min-height", Math.max(dH, cH));
+            $("#netbanking").css('min-height', Math.max(dH, cH));
+          });
+         
+          $("#InfoDivTrigger").hover(function(){
+            $("#PayuPaisaWallet .how_info_div").fadeIn('fast');
+          }, function(){
+            $("#PayuPaisaWallet .how_info_div").fadeOut('fast');
+          });
+         
+          $(".change_type").click(function(){
+            var _type = $(this).attr('data-type');
+            var _parent = $(this).parents('.pg_down_div');
+            _parent.find('.nb_f').hide();
+            _parent.find('.' + _type).show();
+          });
+         
+             $(document).ready(function() {
+            $('.v-button').on('click',function(event,params){
+              onVisaCheckoutReady(params);
+            });
+         
+            $('.paypallink').on('click',function(event,params){
+              if(paypalMcpProductType){
+                document.getElementById("paypal_loader").style.visibility = "visible";
+                getMCPofPaypal('paypal', $('#paymentForm input[name=txtid]').val(), '');
+              }else{
+                $(".paypal-currency-list").hide();
+              }
+         
+            });
+         
+            $("#captcha input[type='text']").keydown(function(event) {
+                     removeError_feedback(event);
+                 });
+                 if( storeCardOnByDefault == 1 ){
+                     jQuery(".card-name").removeClass('hidden');
+                     jQuery("#storeCardLink").html("Undo save");
+                     jQuery(".debit-card-name").removeClass('hidden');
+                     jQuery("#storeDebitCardLink").html("Undo save");
+                     jQuery(".reward-card-name").removeClass('hidden');
+                     jQuery("#storeRewardCardLink").html("Undo save");
+                     jQuery(".emi-card-name").removeClass('hidden');
+                     jQuery("#storeEMICardLink").html("Undo save");
+                 }
+             });
+         });
+          
+      </script>
+      <script id="cardList" type="text/x-handlebars-template">
+         <li>
+          <a class="cardPayment payment_title payment_card_type" card_type="{{bank}}" rel="{{card_token}}" href="javascript:void(0);">
+            <small>{{card_name}}</small>
+          </a>
+         </li>
+      </script>
+      <script id="manageCardDetailTemplate" type="text/x-handlebars-template">
+         <p class="top">
+          <span>Selected card details</span><br /><br />
+          <strong>Card:</strong><br />
+          {{card_name}}<br />
+          <strong>Name on Card:</strong><br />
+          {{name_on_card}}
+         </p>
+      </script>
+      <!--Bank Icons and Wallet Icons functions for DOM Manipulation:: Starts-->
+      <script>
+         value_sele1 = 'null';
+         value_sele2='null';
+         $('#netbanking_select').keydown(function(){
+          setTimeout(function(){
+          var clear_val=$('#netbanking_select').val();
+            if(clear_val!=value_sele1){
+              sele = true;
+            }
+            if(clear_val==value_sele1){
+              sele = false;
+            }
+            $('#netbanking_select').valid();
+         
+          if(sele){
+            clear_all_sel();
+          }
+            var rev_sel=$('#netbanking_select').val();
+                var selection1 = $('#b-icon-1').attr('class').split('icon-bank icon-')[1];
+              if(rev_sel == selection1){
+                clear_all_sel();
+                $('#bank-rect-id-1').attr("style","border:2px solid #00adf2;");
+                $('#radio-1').attr("checked",true);
+              }
+                  var selection2 = $('#b-icon-2').attr('class').split('icon-bank icon-')[1];
+              if(rev_sel == selection2){
+                clear_all_sel();
+                $('#bank-rect-id-2').attr("style","border:2px solid #00adf2;");
+                $('#radio-2').attr("checked",true);
+              }
+                  var selection3 = $('#b-icon-3').attr('class').split('icon-bank icon-')[1];
+              if(rev_sel == selection3){
+                clear_all_sel();
+                $('#bank-rect-id-3').attr("style","border:2px solid #00adf2;");
+                $('#radio-3').attr("checked",true);
+              }
+                  var selection4 = $('#b-icon-4').attr('class').split('icon-bank icon-')[1];
+              if(rev_sel == selection4){
+                clear_all_sel();
+                $('#bank-rect-id-4').attr("style","border:2px solid #00adf2;");
+                $('#radio-4').attr("checked",true);
+              }
+                  var selection5 = $('#b-icon-5').attr('class').split('icon-bank icon-')[1];
+              if(rev_sel == selection5){
+                clear_all_sel();
+                $('#bank-rect-id-5').attr("style","border:2px solid #00adf2;");
+                $('#radio-5').attr("checked",true);
+              }
+                  var selection6 = $('#b-icon-6').attr('class').split('icon-bank icon-')[1];
+              if(rev_sel == selection6){
+                clear_all_sel();
+                $('#bank-rect-id-6').attr("style","border:2px solid #00adf2;");
+                $('#radio-6').attr("checked",true);
+              }
+                $('#netbanking_select').trigger('change');
+         },0);
+         
+         });
+         
+         $('#cash_card_select').keydown(function(){
+           setTimeout(function(){
+         
+              var clear_val=$('#cash_card_select').val();
+              if(clear_val!=value_sele2){
+                sele = true;
+              }
+              if(clear_val==value_sele2){
+         
+                sele = false;
+              }
+              $('#cash_card_select').valid();
+            if(sele){
+              clear_all_sel();
+            }
+         
+              var rev_sel=$('#cash_card_select').val();
+                $('#cash_card_select').trigger('change');
+         
+            },0);
+         });
+         
+         function bankicons(bankRect,radio,bankIcon){
+          clear_all_sel();
+          if(bankRect!=null){
+           $('#'+bankRect).attr("style","border:2px solid #00adf2;");
+           var selection = $('#'+bankIcon).attr('class').split('icon-bank icon-')[1];
+          $('#netbanking_select').val(selection.toString());
+          value_sele1 = $('#netbanking_select').val();
+            $('#netbanking_select').valid();
+         
+            $('#netbanking_select').trigger('change');
+         }
+         }
+         function walleticons(bankRect,radio,bankIcon){
+          clear_all_sel();
+          if(bankRect!=null){
+           $('#'+bankRect).attr("style","border:2px solid #00adf2;");
+           var selection = $('#'+bankIcon).attr('class').split('icon-bank icon-')[1];
+          $('#cash_card_select').val(selection.toString());
+            value_sele2 = $('#cash_card_select').val();
+            $('#cash_card_select').valid();
+         
+            $('#cash_card_select').trigger('change');
+         }
+         }
+         
+         function clearselection(nbw){
+          if(nbw == 'bank'){
+            var clear_val=$('#netbanking_select').val();
+            if(clear_val!=value_sele1){
+              sele = true;
+            }
+            if(clear_val==value_sele1){
+         
+              sele = false;
+            }
+            $('#netbanking_select').valid();
+         
+          }
+          if(nbw == 'wallet'){
+            var clear_val=$('#cash_card_select').val();
+            if(clear_val!=value_sele2){
+              sele = true;
+            }
+            if(clear_val==value_sele2){
+              sele = false;
+            }
+            $('#cash_card_select').valid();
+         
+          }
+          if(sele){
+          clear_all_sel();
+          }
+         
+          if(nbw=='bank'){
+           var rev_sel=$('#netbanking_select').val();
+             var selection1 = $('#b-icon-1').attr('class').split('icon-bank icon-')[1];
+           if(rev_sel == selection1){
+             clear_all_sel();
+             $('#bank-rect-id-1').attr("style","border:2px solid #00adf2;");
+             $('#radio-1').attr("checked",true);
+           }
+             var selection2 = $('#b-icon-2').attr('class').split('icon-bank icon-')[1];
+           if(rev_sel == selection2){
+             clear_all_sel();
+             $('#bank-rect-id-2').attr("style","border:2px solid #00adf2;");
+             $('#radio-2').attr("checked",true);
+           }
+             var selection3 = $('#b-icon-3').attr('class').split('icon-bank icon-')[1];
+           if(rev_sel == selection3){
+             clear_all_sel();
+             $('#bank-rect-id-3').attr("style","border:2px solid #00adf2;");
+             $('#radio-3').attr("checked",true);
+           }
+             var selection4 = $('#b-icon-4').attr('class').split('icon-bank icon-')[1];
+           if(rev_sel == selection4){
+             clear_all_sel();
+             $('#bank-rect-id-4').attr("style","border:2px solid #00adf2;");
+             $('#radio-4').attr("checked",true);
+           }
+             var selection5 = $('#b-icon-5').attr('class').split('icon-bank icon-')[1];
+           if(rev_sel == selection5){
+             clear_all_sel();
+             $('#bank-rect-id-5').attr("style","border:2px solid #00adf2;");
+             $('#radio-5').attr("checked",true);
+           }
+             var selection6 = $('#b-icon-6').attr('class').split('icon-bank icon-')[1];
+           if(rev_sel == selection6){
+             clear_all_sel();
+             $('#bank-rect-id-6').attr("style","border:2px solid #00adf2;");
+             $('#radio-6').attr("checked",true);
+           }
+           
+          }
+         
+          if(nbw=='wallet'){
+           var rev_sel=$('#cash_card_select').val();
+            }
+         }
+         
+         function clear_all_sel(){
+          $('.bank-rect').attr("style","border:1px solid #c9c9c9;");
+          $(".radio-custom").attr("checked",false);
+          $(".radio-customw").attr("checked",false);
+         
+         }
+         
+         <!--Ends-->
+      </script>
+      <!--For Deletion-->
+      <script>
+         var arrSplit = document.cookie.split(";");
+         
+         for(var i = 0; i < arrSplit.length; i++)
+         {
+          var cookie = arrSplit[i].trim();
+          var cookieName = cookie.split("=")[0];
+         
+          // If the prefix of the cookie's name matches the one specified, remove it
+          if(cookieName.indexOf("PAYU_COOK_") === 0) {
+         
+            // Remove the cookie
+            document.cookie = cookieName + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+          }
+         }
+      </script>
+      <script type="text/javascript">
+         try {
+             var fittipaldi=(function(t,i,n){var c={};return c.loadFittipaldi=function(){try{window.callBackFittipaldi=function(t){},window.customVars=new Object,function(){var c=document.createElement("script");c.type="text/javascript",c.async=!0,c.id="fittipaldi",window.customVars.ORDERID=i,window.customVars.merchant_id=t,c.src=n,document.documentElement.firstChild.appendChild(c)}()}catch(t){console.log(t)}},c})("13795", "6904799903","https://fingerprint.payumoney.com/js/fittipaldiJs.js?fkey=57ad8dfbe4b045b1b23bf0d9&orderId=13795");
+                         window.addEventListener("load", function(){
+                 fittipaldi.loadFittipaldi();
+             }, false);
+         } catch(e){
+             console.log("Fittipaldi exception " + e);
+         }
+      </script>
+      <div id="footer" class="">
+         <ul id="fotter_logo" class="footer_class">
+            <li class="visa"><a href="javascript:void(0);" onclick="openlink('https://usa.visa.com/personal/security/vbv/index.html?ep=v_sym_/verified');"></a></li>
+            <li class="master"><a href="javascript:void(0);" onclick="openlink('http://www.mastercard.com/us/business/en/corporate/securecode/sc_popup.html?language=en');"></a></li>
+            <script type="text/javascript" src="PayUbiz_files/verisign.js"></script>
+            <li class="verisign"><a href="javascript:vrsn_splash()"></a></li>
+            <li class="pci"><a href="javascript:void(0);" onclick="openlink('http://seal.panaceainfosec.com/index.php?certid=CERT54CAF9A347');"></a></li>
+            <li class="asefty"><a></a></li>
+            <li class="amex"><a></a></li>
+            <li class="rupay"><a></a></li>
+         </ul>
+      </div>
+      <script language="javascript" type="text/javascript">
+         function openlink(url) {
+           window.open(url, "DescriptiveWindow","toolbar=0,scrollbars=1,resizable=1,width=550,height=500");
+           self.name = "mainWin";
+         }
+      </script>
+      <div style="display: none; z-index: 1000; outline: 0px none currentcolor;" class="ui-dialog ui-widget ui-widget-content ui-corner-all" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-manage_card">
+         <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-manage_card">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+         <div id="manage_card" style="" class="ui-dialog-content ui-widget-content">
+            <div class="cards_main">
+               <img src="PayUbiz_files/top_curve1.png" alt="" class="left">
+               <div class="cards_mid">
+                  <h2>Manage your card</h2>
+                  <div id="manageCardDetails"></div>
+                  <p class="top">Do you want to remove this from saved cards ?</p>
+                  <a href="javascript:void(0);" id="manageCardRemove" class="green_btn"><span>Remove</span>
+                  </a><a href="javascript:void(0);" id="manageCardCancel" class="grey_btn"><span>Cancel</span> </a>
+                  <p class="bottom">
+                     Your cards are saved securely with us.<br> For any further
+                     information, <br> we are glad to assist at <a href="mailtto:contact@payu.in">contact@payu.in</a>
+                  </p>
+               </div>
+               <img src="PayUbiz_files/bottom_curve1.png" alt="" class="right">
+            </div>
+         </div>
+      </div>
+      <div style="display: none; z-index: 1000; outline: 0px none currentcolor;" class="ui-dialog ui-widget ui-widget-content ui-corner-all" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-learn_more">
+         <div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-dialog-title" id="ui-dialog-title-learn_more">&nbsp;</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div>
+         <div id="learn_more" style="" class="ui-dialog-content ui-widget-content">
+            <div class="learn_main" style="position: relative; z-index: 15">
+               <img src="PayUbiz_files/top_curve.png" alt="" class="left">
+               <div class="learn_mid">
+                  <h2>Its extremely safe and secure</h2>
+                  <ul class="learn_ftr">
+                     <li>
+                        <img src="PayUbiz_files/protection_icon.gif" alt="" class="left">
+                        <h6>Hardware protection.</h6>
+                        <p>A specialised hardware is used to keep your data safe in a
+                           encrypted format. Very few companies do it globally since this
+                           hardware is very expensive and we are the first one's in India.
+                        </p>
+                     </li>
+                     <li>
+                        <img src="PayUbiz_files/password_stored.gif" alt="" class="left">
+                        <h6>No password stored.</h6>
+                        <p>There is nothing to worry about. And we only store your card
+                           number and expiry date. CVV or your password is not stored. You
+                           would need to enter that every time whenever you have to do a
+                           transaction.
+                        </p>
+                     </li>
+                     <li>
+                        <img src="PayUbiz_files/secure.gif" alt="" class="left">
+                        <h6>Secure</h6>
+                        <p>We are one of the very few companies who use this level of
+                           protection.
+                        </p>
+                     </li>
+                     <li>
+                        <img src="PayUbiz_files/control_icon.gif" alt="" class="left">
+                        <h6>Easy update.</h6>
+                        <p>You can always check, edit or completely remove any information
+                           you have given us.
+                        </p>
+                     </li>
+                  </ul>
+                  <p class="spprt">
+                     For any further information, we are glad to assist at <a href="mailto:contact@payu.in">contact@payu.in</a>
+                  </p>
+                  <a id="learn-more_close-btn" href="javascript:void(0);" class="green_btn"><span>OK</span> </a>
+               </div>
+               <img src="PayUbiz_files/bottom_curve.png" alt="" class="right">
+            </div>
+         </div>
+      </div>
+      <object type="application/x-shockwave-flash" id="swfM" name="swfM" data="PayUbiz_files/fittipaldi_flash.swf" width="1" height="1">
+         <param name="allowscriptaccess" value="always">
+      </object>
+      <iframe id="xd_frame_fittipaldi" name="xd_frame_fittipaldi" style="position:absolute; top:-1000px; left:-1000px;z-index:-99999;" src="PayUbiz_files/iframe.html" width="1px" height="1px"></iframe>
+   </body>
+</html>
+
