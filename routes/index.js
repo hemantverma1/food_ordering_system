@@ -101,15 +101,16 @@ router.get('/checkout', isLoggedIn, function(req, res, next) {
 
 router.post('/checkout', isLoggedIn, function(req, res, next) {
   if (!req.session.cart) {
+      console.log("Failed!!");
     return res.redirect('/shopping-cart');
   }
   var cart = new Cart(req.session.cart);
   var order = new Order({
     user: req.user,
     cart: cart,
-    address: req.body.address,
-    name: req.body.name,
-    paymentId: 'COD',
+    address: req.user.state,
+    name: req.user.name,
+    paymentId: 'PAID',
     date: getdatestr(),
     time: gettimestr(),
     preparing: true,
@@ -120,7 +121,7 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
   order.save(function(err, result) {
     req.flash('success', 'Food ordered successfully!');
     req.session.cart = null;
-    res.render('shop/orderplaced');
+    res.redirect('/');
   });
 });
 

@@ -1,0 +1,1669 @@
+pre{word-wrap:normal;overflow:auto;}
+code{font:.857em/1 Menlo, Monaco, 'Bitstream Vera Sans Mono', 'Courier New', monospace;}
+pre code { font-family: Menlo, 'Bitstream Vera Sans Mono', Monaco, 'Courier New', monospace; }
+fieldset { display: block; border: none; margin: auto; padding: 0; }
+.amp{font-family:'Hoefler Text', Baskerville, Palatino, 'Book Antiqua', Constantia, 'URW Palladio L';font-style:italic;font-size:1.2em;line-height:.5em;}
+.quo{margin-left:-.24em;}
+.dquo{margin-left:-.44em;}
+.tquo{margin-left:-.68em;}
+html{overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+body{color:#444;background:#FFF;}
+.flushright { float: right; }
+#header { padding: 2em 0 1.2em; }
+#header h1{font-weight:700;font-size:2em;}
+#header h2{text-align:right;line-height:1.5em;}
+.order-summary{font-family:"Helvetica Neue", Arial, Helvetica,sans-serif;color:#FFF;border:1px solid #FFF;overflow:hidden;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;font-weight:400;background:#00AEEF;width:100%;height:auto;}
+p.summary-right{float:right;padding-right:40px;width:auto!important;font-size:12px!important;}
+.ie6 .order-summary { height: 47px; }
+.order-summary .amount{margin-right:0;line-height:17px;padding-right:7px;background:transparent;border-right:none;}
+.order-summary .transid{text-align:right;background-color:transparent;}
+.order-summary .padding1{padding-top:15px;padding-bottom:15px;margin-bottom:0;}
+.order-summary p{ font-size: 13px;}
+.order-summary span{color:inherit;font-size:15px;line-height:17px;font-weight:700;}
+div.emiMessage{padding-left:85px;}
+.small-font{font-size:10px;}
+.logo{background:url('/images/payu_india.gif?v1.0') no-repeat left top;width:174px;height:60px;/*_height:49px;*/float:left;margin-right:0;}
+.hdfc_logo{background:url(/images/hdfc_logo.gif) no-repeat left top;width:205px;height:60px;/*_height:49px;*/float:left;margin-right:0;}
+.obc_logo{background:url(/images/obc_logo.jpg) no-repeat left top;width:310px;height:60px;/*_height:49px;*/float:left;margin-right:0;}
+.jandk_logo{background:url(/images/jandk_logo.png) no-repeat left top;width:250px;height:70px;/*_height:49px;*/float:right;margin-right:0;}
+.indus_logo{background:url(/images/indus_logo.jpeg) no-repeat left top;width:192px;height:60px;/*_height:49px;*/float:left;margin-right:0;}
+#content,#retry{border:1px solid #e9e9e9;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;background-color:#fff;width:100%;}
+#BillingDetails h3{color:#444;font-size:12px;font-weight:700;line-height:1.5em;margin:0;}
+#BillingDetails #product-details p,#BillingDetails #billing-details p{color:#777;}
+#BillingDetails #product-details p.amount{color:#000;}
+#BillingDetails .order-details ol li{border-bottom:1px solid #e9e9e9;margin-bottom:20px;margin-top:0;padding-top:0;}
+.oldie #BillingDetails .order-details ol li{padding-bottom:20px;}
+#BillingDetails #billing-details{font-size:1em;line-height:1.45em;border-top:1px solid #EEE;width:100%;padding-top:15px;}
+#BillingDetails #billing-details .billing-name h4{margin:0;}
+#BillingDetails h4{font-size:1em;margin:0;}
+#BillingDetails .total h4 { margin-right: 10px;	}
+#BillingDetails .pane{display:block;text-decoration:none;border-right:0;line-height:1.5em;cursor:pointer;width:100%;background-color:#f9f9f9;border-color:#ddd;}
+#BillingDetails .pane h3{line-height:1.5em;margin:0;}
+#BillingDetails .pane span.details{overflow:hidden;-webkit-transition:all .25s ease-in;color:#888;text-overflow:ellipsis;display:inline-block;white-space:nowrap;}
+#BillingDetails .order-details{overflow:hidden;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;border:1px solid #00AEEF;width:100%;border-top:none;}
+#BillingDetails .order-details hr{background-color:#bbb;}
+#BillingDetails .order-details span.hide-show-button{display:none;cursor:pointer;font-size:.9em;border-radius:15px;-webkit-border-radius:15px;-moz-border-radius:15px;color:#8d8d8d;background-color:#eaeaea;text-decoration:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:0;-o-user-select:none;user-select:none;padding:5px 10px;}
+#BillingDetails .order-details span.hide-show-button span.text{display:inline-block;width:75px;text-align:center;}
+#BillingDetails .order-details span.hide-show-button img{transition:all .25s ease-in;-moz-transition:all .25s ease-in;-webkit-transition:all .25s ease-in;-o-transition:all .25s ease-in;}
+#BillingDetails .order-details span.hide-show-button img.rotate{transform:rotate(180deg);-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);-o-transform:rotate(180deg);-moz-transform:rotate(180deg);}
+.message{text-align:center;overflow:hidden;}
+.message p,.message ul{margin-top:20px;text-align:left;}
+.message dt{float:left;clear:left;font-weight:400;padding:2px 0;}
+.message dd{float:right;clear:right;font-weight:700;padding:2px 0;}
+div#content.message{padding:30px 0;}
+div#content.borderNone{border:0px !important;padding:0px !important;}
+div#content.sorry{padding:0 0 40px;}
+#content .message h4{font-size:1.5em;font-weight:lighter;margin-bottom:20px;color:#999;}
+#content .message #failed{color: #999;font-size: 13px;font-weight: bold;}
+#content .message #userCancelled{color: #999;font-size: 13px;font-weight: bold;}
+#content .message #pending{color: #999;font-size: 13px;font-weight: bold;}
+#content .message img{vertical-align:bottom;padding-right:10px;}
+#content .message .processing{color:#008FC4;display:block;-webkit-margin-before:1.33em;-webkit-margin-after:1.33em;-webkit-margin-start:0;-webkit-margin-end:0;font-size:1.5em;font-weight:lighter;margin-bottom:20px;}
+#content .message .failed,#content .message .discount,#content .message .err,#retry .transaction-failed-message .failed{color:#e0121d;}
+#content .message .congrats { color: #005E20; }
+.message #failReason{margin-top:5px;text-align:left;margin-left:40px;color:#999;}
+#content .discount-message-box p.discount-message{text-align:center;font-size:1.25em;margin-top:10px;}
+#content .discount-message-box h4 { margin-bottom: 10px; }
+#retry a,#retry a:hover{text-decoration:none;font-weight:700;}
+#retry a.green-button:hover{color:#FFF;}
+#retry .transaction-failed-message{background-color:#FFF;text-align:left;border-bottom:1px solid #E9E9E9;}
+#retry .transaction-failed-message h4{margin-top:20px;margin-bottom:0;font-size:1.5em!important;font-weight:300;}
+#retry .transaction-failed-message p.reason-for-failure{margin-top:5px;font-size:1.2em;}
+#retry .transaction-failed-message p.reason-for-failure .transaction-failed-reason{font-weight:700;}
+#retry .cash-on-delivery p:first-child{margin-bottom:30px;}
+.li-hr { margin-top: -15px; }
+.chargedDiv{width:500px;border-bottom:1px solid #CCC;color:#000;font:13px arial;margin:0 auto;padding:24px 0 17px;}
+.chargedDiv span{color:#00AEEF;font:bold 13px arial;}
+#payment{background-color:#FFF;_display:inline-block;width:635px;/*	overflow: hidden;*/}
+#payment.left{display:inline-block;}
+#payment #payment-tabs{float:left;}
+#payment .pnote{background-color:#FFF9B6;height:auto;padding-bottom:10px;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;}
+#payment .pnote img{float:left;padding:5px;}
+#payment .pnote span{display:inline-block;font-size:.9em;padding:18px 0 0 5px;}
+#payment .payment-box{background-color:#fff;padding-bottom:none!important;border:none!important;}
+#payment .payment-box fieldset p{/*position: relative;*/border:none!important;}
+.ie6 #payment .payment-box fieldset p{clear:both;}
+#payment .payment-box .credit-card-form label img{border:0;padding-top:8px;margin-bottom:-8px;margin-right:5px;}
+#payment .payment-box .credit-card-form label.card_blck1{width:135px;float:left;padding-top:0;}
+#payment .payment-box .credit-card-form label.card_blck1 img.card{float:left; margin-right:0;}
+#payment .payment-box .credit-card-form label.card_blck1 input{float:left: width:14px; height:14px;}
+#payment .payment-box .credit-card-form label.card_blck2{width:85px;float:left;padding-top:0;}
+#payment .payment-box .credit-card-form label.card_blck2 img.card{float:left; margin-right:0;}
+#payment .payment-box .credit-card-form label.card_blck2 input{float:left: width:14px; height:14px;}
+#payment .payment-box .credit-card-form label.card_blck3{width:90px;float:left;padding-top:0;}
+#payment .payment-box .credit-card-form label.card_blck3 img.card{float:left; margin-right:0;}
+#payment .payment-box .credit-card-form label.card_blck3 input{float:left: width:14px;height:14px;margin:0;}
+#payment .payment-box fieldset label{color:#444;padding-top:12px;font-size:13px;text-align:right;}
+#payment .payment-box fieldset label.paypal-amount-type{display:inline-block;font-weight: normal;padding-bottom:6px;font-size:13px;float:none;padding-top:0;color:#78726b;}
+#payment .payment-box fieldset label.align_left{text-align: left; padding-top:0;}
+#payment .payment-box fieldset input,#payment .payment-box fieldset select{background-color:transparent;border:1px solid #999;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-moz-outline-radius:0;font-size:1.1em;/*position: relative;*/z-index:10;background:#FFF;margin:.5em 0;padding:5px;}
+#payment .payment-box fieldset input.checkbox{border:none !important;}
+#payment .payment-box fieldset input.text,#payment .payment-box fieldset input.password{width:190px;}
+#payment .payment-box fieldset .card-radio input { border: 0; margin-bottom: 3px; }
+#payment .payment-box fieldset input:focus{outline:none;}
+#payment .payment-box fieldset select{font-size:1.1em;width:103px;padding:5px;}
+#payment .payment-box a.help-link{color:#888;padding-left:5px;text-decoration:none;}
+.debit-card-name label.error, .card-name label.error{margin:0 0 10px 150px !important;}
+#payment .payment-box a.help-link:hover { text-decoration: underline; }
+#payment .payment-box fieldset label.error{position:absolute!important;left:352px;top:0;z-index:1;line-height:1.334em;height:1.334em;border:1px solid #999;border-left:none;font-weight:400;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;margin:.55em 0 0;padding:5px .75em 5px .85em;}
+#payment .payment-box fieldset .card-radio label.error{border:none;font-size:.75em;top:.75em;left:auto;right:15px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+#payment .payment-box fieldset .dropdowns label.error{border-left:1px solid #999;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
+#payment .payment-box fieldset span.offer_fail{float:left;width:306px;margin-left:119px;border:1px solid #e3adad;border-radius:0;color:#860e0e;background:#fadfdf url(/images/failer_icon.png) no-repeat 8px 9px;padding:5px 10px 5px 40px !important;}
+#payment .payment-box fieldset span.offer_success{float:left;width:306px;margin-left:119px;border:1px solid #c2e3ad;border-radius:0;background:#e1fadf url(/images/success_icon.png) no-repeat 8px 9px;color:#183e01;padding:5px 10px 5px 40px !important;}
+#payment .payment-box fieldset span.check_offer{float:left;width:208px;margin-top:0;font-size:11px;margin-left:115px;padding:0!important;}
+#payment .payment-box fieldset span.check_offer_nb{float:left;width:208px;margin-top:0;font-size:11px;margin-left:116px;padding:0!important;}
+#payment .payment-box fieldset a.help-link.str_crd{color:#00AEEF;font-weight:700;margin:0!important;}
+#payment .payment-box fieldset span.check_offer a.help-link{font-weight:700;color:#00AEEF;margin:0;}
+#payment .payment-box fieldset span.check_offer_nb a.help-link{color:#00AEEF;font-weight:700;margin:0;}
+#payment .payment-box fieldset span.cvv_help{float:left;margin-top:12px;margin-left:2px;padding-right:30px!important;}
+#payment .payment-box fieldset .help_link{float:left;margin-top:12px;margin-left:2px;position:relative;}
+#payment .payment-box fieldset .help_link .text{display:none;position:absolute;padding:5px;border:1px solid #ddd !important;width:150px;top:20px;left:0;background:#FFF;z-index:999;}
+#payment .payment-box fieldset .help_link:hover .text{display:block;}
+#payment .payment-box fieldset span a,#payment .payment-box fieldset span img{float:left;clear:left;margin:3px 0;}
+.js #payment .payment-box fieldset span img.help-img{display:none;}
+#payment .payment-box fieldset p.redirect-message{display:none;}
+.ie6 #payment .payment-box fieldset label.error { margin-left: -155px; line-height: 1.267em; height: 1.267em; }
+.ie6 #payment .payment-box fieldset .card-radio label.error { top: 1.75em; right: 210px; }
+.ie7 #payment .payment-box fieldset label.error,.ie8 #payment .payment-box fieldset label.error{left:345px;line-height:1.267em;height:1.267em;}
+.ie7 #payment .payment-box fieldset .card-radio label.error { width: 11em; margin-left: -50px; margin-top: 1.6em; }
+.ie8 #payment .payment-box fieldset .card-radio label.error { left: auto; }
+.ie7 #payment .payment-box fieldset span {  margin-top: -27px; }
+.ie6 #payment .payment-box fieldset span{display:block;float:none;margin-top:0;margin-right:0;padding-left:160px;}
+#payment .payment-menu ul{list-style-type:none;padding:0 0 0 10px;}
+#payment .payment-menu ul li{float:left;display:block;}
+#payment .payment-menu ul li a{display:block;cursor:pointer;float:left;background-color:#E6E6E6;color:#000;text-decoration:none;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-topright:5px;border-top-left-radius:5px;border-top-right-radius:5px;margin:0 2px;padding:10px 20px;}
+#payment .payment-menu ul li a.active{background-color:#00AEEF;color:#fff;}
+#payment .payment-buttons {	text-align: center; clear:both;}
+#payment .payment-buttons span{margin-right:75px;}
+#payment .payment-buttons span a{font-weight:700;}
+#payment .payment-buttons input#pay_button,.green-button{cursor:pointer;font-weight:700;border:1px solid #FFF;font-size:1.2em;color:#fff;text-decoration:none;text-shadow:none;background-color:#00AEEF;background-image:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;padding:10px 25px;}
+input#pay_button_processed,input#pay_button_processed:hover{cursor:pointer;font-weight:700;border:1px solid #0695ca;font-size:1.2em;color:#fff;text-decoration:none;text-shadow:none;background-color:#0695ca;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;padding:10px 25px;}
+.green-button.small{font-size: 1em;}
+#payment .payment-buttons a#pay_button,.green-button{cursor:pointer;font-weight:700;border:1px solid #FFF;font-size:1.2em;color:#fff;text-decoration:none;text-shadow:none;background-color:#00AEEF;background-image:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;padding:10px 25px;}
+#payment input#cancel_button,.grey-button{font-weight:700;float:left;margin-left:10px;border:1px solid #bfbfbf;font-size:1.2em;color:#fff!important;text-decoration:none;text-shadow:none;cursor:pointer;background-color:#afafaf;background-image:none;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;padding:10px 25px;}
+/*#fotter_logo{width:100%;text-align:center;list-style:none;margin:0;padding:0 0 30px;}*/
+/*not to be changed*/
+#fotter_logo li{display:inline-block;height:48px;padding:3px;}
+#fotter_logo li a{background:url(/images/fotter_strip.jpg?v=1.8) no-repeat;display:block;height:48px;}
+/*not to be changed*/
+/*#fotter_logo li.visa a{background-position:left center;width:87px;}
+#fotter_logo li.master a{background-position:-91px center;width:108px;}
+#fotter_logo li.verisign a{background-position:-201px center;width:94px;}
+#fotter_logo li.pci a{background-position:-300px center;width:140px;}
+#fotter_logo li.asefty a{background-position:-449px center;width:120px;}
+#fotter_logo li.amex a{background-position:-580px center;width:45px;}*/
+/**new logo css changes**/
+#fotter_logo{text-align:center;list-style:none;margin:0;padding:0 0 30px;}
+#fotter_logo li.visa a{background-position:left center;width:75px;}
+#fotter_logo li.master a{background-position:-69px center;width:102px;}
+#fotter_logo li.verisign a{background-position:-165px center;width:92px;}
+#fotter_logo li.pci a{background-position:-252px center;width:132px;}
+#fotter_logo li.asefty a{background-position:-374px center;width:120px;}
+#fotter_logo li.amex a{background-position:-488px center;width:45px;}
+#fotter_logo li.rupay a {background-position: -534px center;width: 86px;}
+#fotter_logo li.paypal a {display: block; background-position: -623px center;width: 116px;}
+/*end of new logo changes*/
+
+/*#footer_logo{width:100%;text-align:center;padding:0;margin:0;list-style:none;padding-bottom:30px;}*/
+#footer_logo{text-align:center;list-style:none;margin:0;padding:0 0 30px;}
+
+#footer_logo li{display:inline-block;height:48px;padding:3px;}
+#footer_logo li a{background:url(/images/colored_footer.jpg) no-repeat;display:block;height:48px;}
+/*#footer_logo li.visa a{background-position:left center;width:95px;}
+#footer_logo li.master a{background-position:-91px center;width:108px;}
+#footer_logo li.verisign a{background-position:-207px center;width:104px;}
+#footer_logo li.pci a{background-position:-312px center;width:115px;}
+#footer_logo li.asefty a{background-position:-433px center;width:129px;}
+#footer_logo li.amex a{background-position:-574px center;width:55px;}*/
+
+#footer_logo li.visa a{background-position:left center;width:78px;}
+#footer_logo li.master a{background-position:-76px center;width:100px;}
+#footer_logo li.verisign a{background-position:-173px center;width:91px;}
+#footer_logo li.pci a{background-position:-265px center;width:107px;}
+#footer_logo li.asefty a{background-position:-371px center;width:113px;}
+#footer_logo li.amex a{background-position:-488px center;width:45px;}
+#footer_logo li.rupay a {background-position: -534px center;width: 102px;}
+
+#payment input#cancel_button:hover,.grey-button:hover{color:#fff;background-color:#bdbdbd;background-image:none;}
+#payment .p-endnote { margin-top: 30px; }
+#payment .p-endnote span{color:#00AEEF;font-weight:700;}
+#content .disclaimer { background-color: #fff; }
+#footer ul.associates{list-style-type:none;text-align:center;margin:0 auto;padding:10px 0 0;}
+#footer ul.associates li{display:inline;margin-right:81px;padding:0;}
+#footer ul.associates li.paddnone{margin-right:0!important;}
+#footer ul.footer-menu{text-align:center;font-size:1em;list-style-type:none;margin:0;padding:20px 0;}
+#footer ul.footer-menu li { display: inline; }
+.oldie #footer ul.footer-menu li { padding: 5px; }
+#footer ul.footer-menu li + li:before{content:"·";font-size:1.5em;font-weight:700;color:#898989;margin:0;padding:0 .5em 0 .3em;}
+#footer ul.footer-menu a{text-decoration:none;color:#898989;}
+#footer .footer-menu a:hover { text-decoration: underline; }
+#payment #payment-tabs.initial ul{display:block;cursor:pointer;color:#000;text-decoration:none;list-style:none;margin:0 1em;padding:.2em .2em 0;}
+#payment #payment-tabs.initial ul li{float:left;list-style:none;-webkit-border-top-left-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-radius-topleft:5px;-moz-border-radius-topright:5px;border-top-left-radius:5px;border-top-right-radius:5px;background-color:#E6E6E6;margin:0 2px;padding:10px 20px;}
+#payment #payment-tabs.initial ul li a{color:#000;text-decoration:none;}
+.ui-tabs{/*position: relative;*/ /*padding: .2em;*/ zoom:1;}
+.ui-tabs .ui-tabs-nav{margin:0;padding:0;}
+.ui-tabs .ui-tabs-nav li{list-style:none;float:left;/*position: relative;*/top:1px;border-bottom:0!important;white-space:nowrap;margin:0 .2em 1px 0;padding:0;}
+.ui-tabs .ui-tabs-nav li a.first{border-top:none;}
+.ui-tabs .ui-tabs-nav li a{display:block;cursor:pointer;float:left;background-color:#F9F9F9;color:#000;text-decoration:none;font-size:13px;border-left:3px solid #F9F9F9;border-bottom:1px solid #CCC;position:relative;margin:0!important;padding:10px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected{margin-bottom:0;padding-bottom:1px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.white{display:block;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a,.ui-tabs .ui-tabs-nav li.ui-state-disabled a,.ui-tabs .ui-tabs-nav li.ui-state-processing a{background-color:#FFF;color:#00AEEF;border-left-color:#00AEEF;}
+.ui-tabs .ui-tabs-nav li a,.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a{cursor:pointer;}
+.ui-tabs .ui-tabs-panel{display:block;background:none;border-width:0;}
+.ui-tabs .ui-tabs-hide { display: none !important; }
+.topborder { border-top: 1px solid #ddd; }
+.bottomborder { border-bottom: 1px solid #ddd; }
+.vertical-padding{padding-top:15px;padding-bottom:15px;}
+.top-padding { padding-top: 15px; }
+.bottom-padding { padding-bottom: 15px; }
+.zero{height:0;margin:0;padding:0;}
+.main_container{width:628px;border:1px solid #c8c8c8;background:#fff;margin:0 auto;padding:10px 58px 18px 18px;}
+.create_invoice{font:bold 24px arial;color:#666;}
+/*.required{font:normal 12px arial; float:right;}*/
+.below{color:#666;padding:1px 0 0;}
+.below .use{font:bold 16px arial;color:#666;width:auto;margin:0;padding:0;}
+.below > div{width:258px;margin:0;padding:22px 0 0;}
+.below span{float:left;font:bold 12px arial;color:#666;margin:43px 0 0 15px;}
+.below > div label{display:block;font:bold 12px arial;color:#666;float:left;}
+.below > div label.input_pink{border:1px solid #bbb;background:#fbe3e4;font:normal 11px arial;color:#666;width:160px;margin:0 0 0 8px;padding:2px;}
+.productDetails > div.below > div input{background:#f2f2f2;border:1px solid #bbb;width:250px;height:22px;font:normal 12px arial;color:#666;margin:4px 0 0;padding:0 0 0 5px;}
+.below > div input.pink{background:#f2f2f2;border:1px solid #bbb;width:250px;height:22px;font:normal 12px arial;color:#666;margin:4px 0 0;padding:0 0 0 5px;}
+.below > div input.pink_error{background:#fbe3e4;border:1px solid #bbb;width:250px;height:22px;font:normal 12px arial;color:#666;margin:10px 0 0;padding:0 0 0 5px;}
+.below > div label.error{float:right;font:11px arial;margin-bottom:0;font-weight:400;padding:0;}
+.fL{ float:left; clear:left;}
+.fR{ float:right; clear:right;}
+.cL{ clear:both;}
+.product{background:#f2f2f2;border:1px solid #bbb;height:120px;margin:20px 0;padding:12px;}
+.product span{font:normal 14px arial;color:#666;display:block;float:none;margin:0;padding:5px 0 0;}
+.conform{padding:20px 0 0;}
+.errordiv{background:#fbe3e4;border:1px solid #bbb;width:150px;height:20px;}
+.pop_up{background:#ececec;border:1px solid #bbb;width:850px;height:148px;padding:5px 40px 20px 30px;}
+.pop_up h1{font:bold 24px arial;color:#666;margin:0;padding:18px 0 0;}
+.payment{background:#fff;border:1px solid #bbb;width:700px;height:30px;overflow:hidden;margin:20px 0 0;padding:12px;}
+.payment span input{border:none;width:400px;font:normal 18px airal;color:#666;}
+.baseLayer{background:#000;opacity:.6;position:absolute;top:0;width:1100px;height:740px;filter:alpha(opacity=60);}
+.innrLayer{width:700px;top:229px;left:80px;position:relative;}
+.crDiv{ position:absolute; top:-20px; left:889px;}
+.productDetails{width:723px;-moz-border-radius:0;border-radius:0;border:1px solid #e9e9e9;margin:0 auto;}
+.productDetails > div{color:#000;font:bold 13px arial;margin:0;padding:12px 0 6px 18px;}
+.productDetails > div.fL {float:left;}
+.productDetails > div.fR {float:right;}
+.productDetails > div span{float:right;font:bold 12px arial;color:#000;padding:0 126px 0 0;}
+.productDetails span{display:block;color:#666;font:normal 14px arial;padding:4px 0 0 18px;}
+.productDetails > div.productDetails_bod{border-top:1px solid #bbb;margin:15px 0 0;padding:0;}
+.requiredDiv{ width:600px;}
+.productDetails > div input.sameDiv{ margin:0 3px 0 10px;}
+.productDetails > div strong{font:normal 11px arial;color:#666;}
+.confirmMore{background:url(/../../images/confirm.gif) no-repeat scroll left top transparent;border:medium none;height:43px;margin-top:10px;width:137px;cursor:pointer;}
+.js #product-details, .js #billing-details { display: none; }
+.js #BillingDetails .order-details span.hide-show-button { display: inline-block; }
+.js .retry { display: none; }
+.ie6 #payment .prepend-top,.ie6 #payment #payment-tabs,.ie6 #payment #payment-tabs #credit,.ie6 #payment #payment-tabs #debit,.ie6 #payment #payment-tabs #netbanking,.ie6 #payment #payment-tabs #emi,.ie6 #payment #payment-tabs #paypal,.ie6 #payment #payment-tabs #credit .payment-box,.ie6 #payment #payment-tabs #debit .payment-box,.ie6 #payment #payment-tabs #netbanking .payment-box,.ie6 #payment #payment-tabs #emi .payment-box,.ie6 #payment #payment-tabs #paypal .payment-box,.ie6 #payment #payment-tabs #credit .payment-box fieldset p label,.ie6 #payment #payment-tabs #debit .payment-box fieldset p label,.ie6 #payment #payment-tabs #netbanking .payment-box fieldset p label,.ie6 #payment #payment-tabs #emi .payment-box fieldset p label,.ie6 #payment #payment-tabs #paypal .payment-box fieldset p label,
+/*.ie7 #content *{position:relative;}*/
+.ie6 .disclaimer{padding-bottom:15px;}
+.oldie fieldset.prepend-top,.ie7 #paypal .prepend-top{padding-top:1.5em;}
+.ie7 .append-bottom{padding-bottom:1.5em;}
+.footer-amex-safety{background:url(/images/safekeyLogo.gif) no-repeat left top;float:left;width:160px;height:52px;margin-right:4px;}
+.footer-amex{float:left;background:url(/images/aeLogo.gif) no-repeat left top;width:60px;height:54px;}
+.codDiv{width:500px;margin:0 auto;}
+.codDiv h3{font-size: 17px!important; line-height: 19px!important;}
+.chargedDiv1{border-bottom:1px solid #ccc;font:normal 13px arial;color:#000;padding:24px 0 17px 60px;}
+.chargedDiv1 span{color:#00aeef;font:bold 13px arial;width:auto!important;margin:0 2px 0 0 !important;}
+.shippingDiv{font:bold 13px arial;color:#000;padding:17px 0 0 120px;}
+.shippingDiv p{font:bold 14px Helvetica, sans-serif;color:#000;float:none!important;margin:0;padding:24px 0 0;}
+.shippingDiv p.spc{padding-top:8px;}
+.shippingDiv p span{font:normal 12px Helvetica, sans-serif;color:#898989;display:block;line-height:20px;float:none!important;padding:8px 0 10px;}
+.shippingDiv p label a{color:#898989;float:left;font:bold 12px arial;-webkit-border-top-left-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-moz-border-radiust:0;border-radius:0;background:#dedede;padding:4px;}
+.go_badkDiv{border-top:1px solid #ccc;font:normal 13px arial;color:#000;float:left;width:327px;margin:25px 0 0;padding:24px 0 17px 107px;}
+.go_badkDiv.no_brdr{border:medium none;display:inline-block;float:none;width:auto;margin:0;padding:0;}
+.go_badkDiv a{text-decoration:underline;color:#06C;font:13px arial;}
+.shipping_formDiv{font:bold 13px arial;text-align:center;color:#000;width:500px;float:left;padding:17px 0 0;}
+.shipping_formDiv,.codDiv,.payment-box h2{font-size:15px;font-weight:700;line-height:18px;color:#444;padding-bottom:10px;float:left;width:100%;}
+.shipping_formDiv p{margin:0;padding:0;}
+.shipping_formDiv p label{float:left;text-align:right;width:150px;color:#666;font:bold 13px arial;padding:7px 20px 0 0;}
+.shipping_formDiv p input.add_big{float:left;background-color:transparent;border:1px solid #999;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-moz-outline-radius:0;font-size:1.1em;/*position: relative;*/z-index:10;width:298px;background:#FFF;margin:.5em 0;padding:5px;}
+.shipping_formDiv input.add_sm{float:left;background-color:transparent;border:1px solid #999;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-moz-outline-radius:5px;font-size:1.1em;/*position: relative;*/z-index:10;width:147px;background:#FFF;margin:.5em 0;padding:5px;}
+.shipping_formDiv input.add_sm2{float:left;background-color:transparent;border:1px solid #999;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-moz-outline-radius:0;font-size:1.1em;/*position: relative;*/z-index:10;width:137px;background:#FFF;margin:.5em 0;padding:5px;}
+.shipping_formDiv p select.select_add{float:left;background:url(/images/input_big.gif) no-repeat 0 0!important;width:296px;height:32px;border:none;font:normal 13px arial;color:#acacac;margin:0;padding:3px 3px 3px 10px;}
+.shipping_formDiv p input.mob_ad1{float:left;background:url(/images/mob_91.gif) no-repeat;width:46px;height:29px;border:none;font:normal 13px arial;color:#acacac;margin:0;padding:3px 3px 3px 10px;}
+.shipping_formDiv p input.mob_ad2{float:left;background:url(/images/mob_10digit.gif) no-repeat;width:230px;height:29px;border:none;font:normal 13px arial;color:#acacac;margin:0 0 0 10px;padding:3px 3px 3px 10px;}
+.next_step{_padding:0 0 0 160px;font:bold 11px arial;color:#464646;overflow:hidden;height:42px;padding:14px 0 0 169px;}
+.next_step.auto{height:auto;}
+.next_step span{font:bold 11px arial;color:#464646;text-align:left;}
+span.step_v{font:bold 11px arial;color:#464646;float:left;width:100%;text-align:center!important;padding:10px 0 0;}
+span.step_v.left_algn{text-align:left!important;}
+.next_step span img{vertical-align:middle;padding:0 10px 0 0;}
+.go_badkDiv_form{font:normal 12px arial;color:#000;float:left;padding:10px 0 17px;}
+.go_badkDiv_form.bottom{padding-bottom:0;}
+.go_badkDiv_form.brdr{border-top:1px #CCC solid;float:left;margin-top:20px;width:100%;}
+.go_badkDiv_form a{text-decoration:none;color:0;font-weight:700;}
+#payment .payment-box fieldset input.next_btn{float:left;background:#00AEEF;color:#FFF;font-size:1.2em!important;text-indent:0;font-weight:700;width:82px;height:40px;cursor:pointer;border:none!important;display:inline;margin:0 10px 0 0 !important;padding:0!important;}
+.automatedDiv_con{font:bold 13px arial;line-height:23px;color:#8e8d8d;text-align:center;width:453px;margin:0 auto;padding:17px 0 0;}
+.automatedDiv_con.cngrts{color:#999;font-size:1.4em;font-weight:400;}
+.automatedDiv_con.cngrts small{font-size:12px;color:#000;}
+.automatedDiv_con.cngrts span.congrats {color: #005E20;}
+.automatedDiv_con.cngrts strong{font-size:18px;line-height:20px;color:#005E20;}
+.shippingDiv1{font:bold 13px arial;color:#000;padding:17px 0 0 120px;}
+.shippingDiv1 p{font:bold 14px Helvetica, sans-serif;color:#000;float:none!important;margin:0;padding:24px 0 0;}
+.shippingDiv1 p span{font:normal 12px Helvetica, sans-serif;color:#898989;display:block;line-height:20px;float:none!important;padding:8px 0 10px;}
+.shippingDiv1 p label a{color:#898989;float:left;font:bold 12px arial;-webkit-border-top-left-radius:0;text-decoration:none;-webkit-border-radius:0;-moz-border-radius:0;-moz-border-radiust:0;border-radius:0;background:#dedede;padding:2px 6px 4px;}
+.shippingDiv_pad{padding-left:0!important;}
+.automatedDiv_sorry{font:bold 12px arial;color:#333;text-align:center;margin:0 auto;padding:47px 0 0;}
+.go_badkDiv_form strong.or{color:#000!important;}
+.shipping_formDiv1 input.add_big{}
+.shipping_address{float:left;width:100%;border-top:1px #CCC solid;margin-top:24px;padding-top:25px;text-align:left;}
+.shipping_otr{margin:0 100px;}
+.shipping_address .flushleft{float:left; width:130px;}
+.shipping_address p{float:none!important;font:12px/14px Helvetica,sans-serif;color:#898989;margin:0;padding:0;}
+.shipping_address p strong{color:#000; font-size:12px;}
+.shipping_address .flushright{float:right;width:150px;padding:0;}
+.shipping_address .flushright p{color:#A8A8A8!important; font-size:12px;}
+input.chng_btn{background:url(/images/grey_btn_strip.gif) repeat-x 0 0!important;color:#5d5c5c;float:left;font:bold 12px arial;border:1px #bcbcbc solid;margin-top:5px;cursor:pointer;text-transform:capitalize;border-radius:0;padding:2px 6px 4px;}
+#cod-box fieldset{text-align:center;}
+.cod-form select{width:310px;border:1px #999 solid;height:28px;padding:3px 0!important;}
+.shippingDiv_con{font:bold 13px arial;text-align:center;padding:70px 0 30px;}
+.shippingDiv_con.spacing{padding:8px 0 30px;}
+p.cod_sorry{text-align:left;font-size:17px;line-height:20px;font-weight:400;float:none;background:#FFF9B6;display:inline-block;width:674px;margin:0;padding:19px 0 22px 34px;}
+p.cod_sorry a{color: #00AEEF;font: bold 13px arial;text-decoration: none;}
+p.cod_sorry strong{color:#af2c2c!important;font-weight:400;font-size:18px;}
+p.cod_sorry strong.or{color:#333;}
+#cod-box fieldset label.error{float:none!important;left:0;top:10px;width:98.5%!important;font-size:15px;text-align:center;height:auto!important;line-height:25px!important;margin:0!important;padding:0!important;}
+.input_outer{float:left; width:298px; font-size:12px;}
+.input_outer.small_outer{width:147px;}
+.input_outer.small_outer input{width:132px;}
+#payment .payment-box .input_outer.small_outer label.error{line-height:16px!important;padding:5px 0!important;}
+#payment .payment-box .input_outer.small_outer2 label.error{line-height:16px!important;padding:5px 0!important;}
+.input_outer.small_outer .error{line-height:16px!important;}
+.input_outer.small_outer2{width:138px!important; margin-left:12px!important;}
+.shipping_formDiv1 label.error{float:none!important;left:0;top:10px;width:98.5%!important;text-align:center;height:auto!important;line-height:25px!important;border:1px solid #999!important;color:#333;font-weight:400;margin:0!important;padding:5px!important;}
+#mobileDetails label{width:139px;float:left;text-align:right;padding:7px 20px 0 0;}
+#mobileDetails .detail_box{float:right;width:250px;}
+.shippingDiv.fr_change_dtl{padding-left:161px;}
+#mobileDetails label.left{text-align:left;margin:0 0 10px;}
+.shippingDiv p span.box_dtl{width:139px;padding-bottom:10px;}
+.shippingDiv p span.box_dtl input.chng_btn{margin-bottom:10px;}
+fieldset.cc-form{float:left; width:100%;}
+.status_bx p.msg_mn.no_bg{background:none!important;float:left;width:40%!important;}
+.status_bx p.msg_mn.no_bg strong.big{font-size:20px;font-weight:400;line-height:20px;}
+.status_bx p.msg_mn.no_bg a{font-size:20px;font-weight:400;line-height:20px;color:#00A8EE;text-decoration:none;}
+.cntr_bx{width:712px!important;margin:0 auto;}
+.loading_bx{width:580px!important;text-align:center;display:inline-block;background:#fefbda;border-radius:0;min-height:130px!important;}
+.loading_bx p{float:none;font:normal 14px/22px Arial, Helvetica, sans-serif;color:#000;font-weight:700;text-shadow:2px 1px 0 #FFF;margin:0;padding:20px 20px 20px 30px;}
+.loading_bx p a{color:#448fff; text-decoration:none;}
+.loading_bx p small{font-weight:700;font-size:11px;}
+paycoduri{float:left;width:540px;text-align:center;padding:20px 0 0;}
+.loading_bx_wo_lock{width:580px!important;text-align:center;display:inline-block;background:#fefbda;border-radius:0;min-height:130px!important;}
+loading_bx_wo_lock p{float:none;font:14px/22px Arial, Helvetica, sans-serif;color:#000;text-shadow:2px 1px 0 #FFF;margin:0;padding:20px 20px 0 40px;}
+loading_bx_wo_lock p a{color:#448fff; text-decoration:none;}
+loading_bx_wo_lock p small{font-weight:700;}
+.failed_bx{border:1px #d9d06c solid;background:#fff9b6;width:710px;border-radius:0;display:inline-block;text-align:center;margin-top:0;padding:20px 0;}
+.failed_bx h6.hdng{color:#e90000;font:bold 16px/18px Arial, Helvetica, sans-serif;display:inline-block;width:76%;margin:0;padding:0;}
+.failed_bx h6.hdng span{font-size:13px;line-height:22px;display:inline-block;}
+.failed_bx h6.hdng span span{color:#000;}
+.failed_bx h6 img{display:inline-block;}
+.failed_bx h6 strong{display:inline-block;padding-left:0;background:url(/images/error_icon.png) no-repeat 0 0;width:100%;line-height:23px;}
+.failed_bx p{text-align:center;float:left;width:100%;font:bold 12px/22px Arial, Helvetica, sans-serif;color:#000;margin:0;}
+.failed_bx p a{color:#06f;text-decoration:none;}
+.warn_bx{border:5px #e6e6e6 solid;background:none;width:99%;border-radius:0;display:inline-block;text-align:center;margin-top:0;padding:20px 0;}
+.warn_bx h6.hdng{color:#e90000;font:bold 16px/18px Arial, Helvetica, sans-serif;display:inline-block;width:51%;margin:0;padding:0;}
+.warn_bx h6.hdng span{font-size:13px;line-height:22px;display:inline-block;}
+.warn_bx h6.hdng span span{color:#000;}
+.warn_bx h6 img{display:inline-block;}
+.warn_bx h6 strong{display:inline-block;padding-left:0;background:url(/images/error_icon.png) no-repeat 2px 0;width:100%;line-height:23px;}
+.warn_bx p{text-align:center;float:left;width:100%;font:bold 12px/22px Arial, Helvetica, sans-serif;color:#000;margin:0;}
+.warn_bx p a{color:#06f;text-decoration:none;}
+.loading_bx p.waiting3dMsg{background-position:89px 15px;}
+.load_image_process {padding-bottom: 7px;}
+.ui-tabs-vertical ul{width:145px;margin-left:0!important;float:left;background:#F9F9F9;}
+.ui-tabs-vertical ul li{position:relative;}
+.ui-tabs-vertical ul li span.white{position:absolute;background:#FFF;display:none;width:6px;height:40px;right:-5px;top:-1px;}
+.ui-tabs-vertical ul li a{width:122px;border-radius:0!important;}
+.ui-tabs-vertical .ui-tabs-panel{width:566px!important;border-left:1px solid #EEE;float:left;min-height:290px;}
+.ui-tabs-vertical .ui-tabs-panel .payment-box{width:560px!important;}
+.payment_box_header{padding:15px;}
+.payment_box_header p{font-weight:700;font-size:1.1em;margin:0;padding:0;}
+.store_card_SI{float: left; margin-left: 65px;}
+.store_card_SI span.check_box_btn{float: left; width: 307px; margin-right: 7px; margin-top: 7px;}
+.store_card_SI span.lrn_mr{float: left; }
+.offer_message_new{color:#e0121d;font-weight:700;}
+
+/*PaisaWallet Tab CSS*/
+#PayuPaisaWallet{width:100%;float:left;}
+#PayuPaisaWallet h1{color:#00aeef;text-align:left;font-size:1.3em;font-weight:700;float:left;margin-top:7px;}
+#PayuPaisaWallet .max_msg{text-align:left;color:#000;margin:10px 0;}
+#PayuPaisaWallet .card_support{padding-bottom:10px;clear:both;}
+#PayuPaisaWallet .card_support.new{border:none;margin:0;padding:0 0 20px;}
+#PayuPaisaWallet .card_support .wallet_info{color:#666;}
+#PayuPaisaWallet .card_support .wallet_info span{margin-right:6px;display:block;float:left;width:16px;height:15px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -408px -13px;}
+#PayuPaisaWallet .card_image{float:right;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -147px -7px;height:28px;width:120px;margin-left:10px;padding-top:10px;}
+#PayuPaisaWallet .form_container{padding:0 0 25px;float:left;position:relative;width:100%;}
+#PayuPaisaWallet .form_container .form_label{color:#000;font-size:14px;font-weight:700;clear:both;display:block;margin-bottom:20px;margin-top:15px;}
+#PayuPaisaWallet .form_container .wallet_form{float:left;width:45%;}
+#PayuPaisaWallet .form_container .wallet_form .wallet_email{border:1px solid #7e9db9;overflow:auto;margin-bottom:10px;padding:7px 5px 4px;}
+#PayuPaisaWallet .form_container .wallet_form .wallet_email span{display:block;float:left;width:22px;height:20px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -438px -11px;}
+#PayuPaisaWallet .form_container .wallet_form .wallet_email input{border:none;outline:none;float:left;margin-left:10px;margin-top:2px;width:84%;padding:0;}
+#PayuPaisaWallet .form_container .wallet_form .wallet_mobile{border:1px solid #7e9db9;overflow:auto;padding:7px 5px 5px;}
+#PayuPaisaWallet .form_container .wallet_form .wallet_mobile span{display:block;float:left;width:22px;height:20px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -470px -11px;}
+#PayuPaisaWallet .form_container .wallet_form .wallet_mobile input{border:none;outline:none;float:left;margin-left:10px;margin-top:2px;width:84%;padding:0;}
+#PayuPaisaWallet .form_container .info_div{float:left;width:50%;text-align:left;background:#e3f6fd;padding:14px 20px;}
+#PayuPaisaWallet .form_container .info_div .left_heading{color:#000;font-weight:700;font-size:1.3em;}
+#PayuPaisaWallet .form_container .info_div a{color:#00aeef;font-weight:700;text-decoration:underline;margin-top:10px;display:inline-block;position:relative;}
+#PayuPaisaWallet .form_container .info_div a .link_info{position:absolute;right:-21px;top:-1px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -501px -13px;display:inline-block;width:15px;height:15px;}
+#PayuPaisaWallet .form_container .how_info_div{position:absolute;background:#FFF;padding:5px;border:1px solid #AAA;top:7px;left:164px;width:224px;}
+#PayuPaisaWallet .form_container .error_bdr{background:#fdc6c6;color:#bf0303;border-color:#bf0303!important;}
+#PayuPaisaWallet .form_container .error_bdr input{background:#fdc6c6;color:#bf0303;}
+#PayuPaisaWallet .form_info{text-align:left;clear:both;overflow:auto;padding:0 0 25px;}
+#PayuPaisaWallet .form_info h1.black{color:#000;font-weight:400;text-align:left;margin:10px 0;}
+#PayuPaisaWallet .form_info h1.bold{text-align:left;margin:10px 0;}
+#PayuPaisaWallet .form_container .button_container{width:100%;clear:both;padding-top:15px;overflow:auto;}
+#PayuPaisaWallet .form_container .button_container .button{background-color:#00AEEF;background-image:none;border:1px solid #FFF;border-radius:0;color:#FFF;cursor:pointer;font-size:1.2em;font-weight:700;padding:10px 25px;}
+#PayuPaisaWallet .form_container .button_container .button:hover{background-color:#0695CA;}
+#PayuPaisaWallet .form_container .button_container span{display:block;margin:10px 0;}
+#PayuPaisaWallet .form_container .button_container span a{float:none;}
+
+.ui-tabs .ui-tabs-nav li a.paisawallet{padding-left:59px;width:73px;}
+.ui-tabs .ui-tabs-nav li a.payumoney{text-indent:-999999px;background-image:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.2);background-repeat:no-repeat; background-position:0px -56px;}
+.ui-tabs .ui-tabs-nav li a.paypallink{text-indent:-999999px;background-image:url(/images/paypaltab.png?v=1.2);background-repeat:no-repeat; background-position:10px 12px;}
+.ui-tabs .ui-tabs-nav li a.tezlink{text-indent:-999999px;background-image:url(/images/google-tez/web/tez-tab-logo.png?v=1.0);background-repeat:no-repeat; background-position:2px 5px;}
+.ui-tabs .ui-tabs-nav li a.lazypaylink{background-image:url(/images/lazypaylogobeta.png?v=1.2);background-repeat:no-repeat; background-position:68px 14px;}
+.ui-tabs .ui-tabs-nav li a.paisawallet.payumoney{background-position:40px -46px;}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a.payumoney{border-left-color:#81B439 !important; background-position: 0 -56px;}
+.ui-tabs .ui-tabs-nav li span.wallet_mark{background: url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat scroll -2px -2px;color: #FFF;display: block;font-size: 1.2em;font-weight: 700;height: 49px;padding-top: 7px;position: absolute;text-align: center;top: -1px;left: -8px;width: 49px;}
+.ui-tabs .ui-tabs-nav li a.sodexolink{text-indent:-999999px;background-image:url(/images/sodexotab.png);background-repeat:no-repeat; background-position:10px 6px;}
+.pg_down_div{margin:0 auto;width:400px;display:none;}
+.pg_down_div .nb_m{padding:10px;background:#fdc6c6;color:#bf0303;font-weight: bold;border: 1px solid #bf0303;}
+.pg_down_div .nb_f{padding:10px;background:#f8f8f8;margin-top:5px;padding-left: 40px;font-weight: bold;}
+.pg_down_div .nb_f p{margin:0;float:none !important;}
+.pg_down_div .nb_f p.inpt .txt{padding:5px;border:1px solid #AAA;width:200px;}
+.pg_down_div .nb_f p.inpt .txt91{padding:5px;border:1px solid #AAA;width:20px;border-right:0px;}
+.pg_down_div .thankyou_note{color:blue;font-weight:bold;}
+.pg_down_div .pg_down_input_error{border-color:#bf0303 !important;background:#fdc6c6;color:#bf0303;}
+.pg_down_div .pg_down_input_error input{background-color:#fdc6c6 !important;}
+.pg_down_div .nb_f p.inpt .btn{background:#0342a1;border:none;color:#FFF;padding:5px 8px;cursor:pointer;}
+
+.si_only_credit_card{margin:0 auto;width:400px;display:none;}
+.si_only_credit_card .si_error_text{padding:10px;background:#fdc6c6;color:#bf0303;font-weight: bold;border: 1px solid #bf0303;}
+
+.si_debit_card_bank_check{margin:0 auto;width:400px;display:none;}
+.si_debit_card_bank_check .si_error_text{padding:10px;background:#fdc6c6;color:#bf0303;font-weight: bold;border: 1px solid #bf0303;}
+
+.not_debit_card{margin:0 auto;margin-top: 10px;width:400px;display:none;padding:10px;background:#fdc6c6;color:#bf0303;font-weight: bold;border: 1px solid #bf0303;}
+.branding_info{background:url(../../images/branding_popup/payment.png) no-repeat center center;display:block;width:148px;height:22px;position:absolute;right:15px;top:14px;}
+.side-link {margin-top: 10px; display: inline-block;margin-left: 6px; cursor: pointer}
+.radio {position: relative; top: -4px; margin-right: 5px !important;}
+.phone-number{position:relative;}
+.phone-number span.absolute{position:absolute;left:124px;top:10px;font-size:14px;}
+#payment .payment-box fieldset .phone-number input.text{padding-left:30px !important;width:174px !important;}
+
+/*
+* Styles for Bank Icons
+*/
+#bank-icons p{
+  font-size:13px;
+  margin-top:26px;
+  margin-left:31px;
+}
+
+#icon-div{
+  margin-top:13px;
+  margin-left:31px;
+}
+
+.bank-rect{
+  box-sizing: border-box;
+  margin:0px 30px 11px 0px;
+  width: 142px;
+  height: 48px;
+  background-color: #fafafa;
+  border: solid 1px #c9c9c9;
+  float:left;
+}
+
+/*Styling Radio Button*/
+.radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.radio-custom-label {
+    position: relative;
+}
+
+.radio-custom + .radio-custom-label:before {
+    content: '';
+    background: #fff;
+    border: 1px solid #00adf2;
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    padding: 2px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+
+
+.radio-custom + .radio-custom-label:before {
+    border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+    background: #00adf2;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+
+.radio-custom:focus + .radio-custom-label {
+  outline: 0px solid #ddd; /* focus style */
+}
+
+
+
+/*Ends styling radio button*/
+/*Styling Radio Button wallet*/
+.radio-customw {
+    opacity: 0;
+    position: absolute;
+}
+
+.radio-customw, .radio-custom-labelw {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.radio-custom-labelw {
+    position: relative;
+}
+
+.radio-customw + .radio-custom-labelw:before {
+    content: '';
+    background: #fff;
+    border: 1px solid #00adf2;
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    padding: 2px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+
+
+.radio-customw + .radio-custom-labelw:before {
+    border-radius: 50%;
+}
+
+.radio-customw:checked + .radio-custom-labelw:before {
+    background: #00adf2;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+
+.radio-customw:focus + .radio-custom-labelw {
+  outline: 0px solid #ddd; /* focus style */
+}
+
+
+
+/*Ends styling radio button wallet*/
+
+.icon-bank{
+  height:36px;
+  width:96px;
+  margin-top:5px;
+  margin-left:30px;
+  background-image:url(/images/bank_wallet_grid_1x.png?v=0.7);
+}
+.icon-162B{
+  background-position: 0px 0px;
+}
+
+.icon-ADBB{
+  background-position: -96px 0px;
+}
+
+.icon-ALLB{
+  background-position: -192px 0px;
+}
+.icon-AXIB{
+  background-position: -288px 0px;
+}
+.icon-BBRB{
+  background-position: -384px 0px;
+}
+.icon-BBCB{
+  background-position: -384px 0px;
+}
+.icon-BBKB{
+  background-position: -480px 0px;
+}
+.icon-BMBB{
+  background-position: -672px 0px;
+}
+.icon-BMNN{
+    background-position: -672px 0px;
+}
+.icon-BOIB{
+  background-position: -768px 0px;
+}
+.icon-BOMB{
+  background-position: -864px 0px;
+}
+.icon-CABB{
+  background-position: 0px -36px;
+}
+.icon-CBIB{
+  background-position: -96px -36px;
+}
+.icon-CITNB{
+  background-position: -192px -36px;
+}
+.icon-CITIRDR{
+    background-position: -192px -36px;
+}
+.icon-CRPB{
+  background-position: -288px -36px;
+}
+.icon-CORP{
+    background-position: -288px -36px;
+}
+.icon-CRBP{
+    background-position: -288px -36px;
+}
+.icon-PNBB{
+  background-position: -384px -36px;
+}
+.icon-CPNB{
+  background-position: -384px -36px;
+}
+.icon-CSBN{
+  background-position: -480px -36px;
+}
+.icon-CSMSNB{
+  background-position: -576px -36px;
+}
+.icon-CUBB{
+  background-position: -672px -36px;
+}
+.icon-DBSB{
+  background-position: -768px -36px;
+}
+.icon-DCBB{
+  background-position: -864px -36px;
+}
+.icon-DCBCORP{
+  background-position: -864px -36px;
+}
+.icon-DENAB{
+  background-position: -96px -72px;
+}
+.icon-DENN{
+    background-position: -96px -72px;
+}
+.icon-DLSB{
+  background-position: -192px -72px;
+}
+.icon-DSHB{
+  background-position: -288px -72px;
+}
+.icon-FEDB{
+  background-position: -384px -72px;
+}
+.icon-HDFB{
+  background-position: -480px -72px;
+}
+.icon-ICIB{
+  background-position: -576px -72px;
+}
+.icon-ICAV{
+  background-position: -576px -72px;
+}
+.icon-IDBB{
+  background-position: -672px -72px;
+}
+.icon-IDBC{
+    background-position: -672px -72px;
+
+}
+.icon-INDB{
+  background-position: -768px -72px;
+}
+.icon-INIB{
+  background-position: -864px -72px;
+}
+.icon-INOB{
+  background-position: 0px -108px;
+}
+.icon-IOB{
+    background-position: 0px -108px;
+}
+.icon-JAKB{
+  background-position: -96px -108px;
+}
+.icon-JANB{
+  background-position: -192px -108px;
+}
+.icon-JSBNB{
+    background-position: -192px -108px;
+}
+.icon-KRKB{
+  background-position: -288px -108px;
+}
+.icon-KRVB{
+  background-position: -384px -108px;
+}
+.icon-KRVBC{
+    background-position: -384px -108px;
+}
+.icon-LVCB{
+  background-position: -576px -108px;
+}
+.icon-LVBD{
+    background-position: -576px -108px;
+}
+.icon-LVRB{
+  background-position: -576px -108px;
+}
+.icon-OBCB{
+  background-position: -864px -108px;
+}
+
+.icon-PMNB{
+  background-position: 0px -144px;
+}
+.icon-PSBNB{
+  background-position: -192px -144px;
+}
+.icon-RTN{
+  background-position: -288px -144px;
+}
+.icon-RBSB{
+  background-position: -384px -144px;
+}
+.icon-RYBS{
+    background-position: -384px -144px;
+}
+.icon-SBBJB{
+  background-position: -480px -144px;
+}
+.icon-SBHB{
+  background-position: -576px -144px;
+}
+.icon-SBIB{
+  background-position: -672px -144px;
+}
+.icon-SBMB{
+  background-position: -768px -144px;
+}
+.icon-SBPB{
+  background-position: -864px -144px;
+}
+
+.icon-SBTB{
+  background-position: 0px -180px;
+}
+.icon-STBB{
+  background-position: -96px -180px;
+}
+.icon-SOIB{
+  background-position: -192px -180px;
+}
+.icon-SRSWT{
+  background-position: -288px -180px;
+}
+.icon-SVCB{
+  background-position: -384px -180px;
+}
+.icon-SVCNB{
+  background-position: -384px -180px;
+}
+.icon-SYNDB{
+  background-position: -480px -180px;
+}
+.icon-SYDB{
+    background-position: -480px -180px;
+}
+.icon-TMBB{
+  background-position: -576px -180px;
+}
+.icon-UBIB{
+  background-position: -672px -180px;
+}
+.icon-UCOB{
+  background-position: -864px -180px;
+}
+
+.icon-UNIB{
+  background-position: 0px -216px;
+}
+.icon-VJYB{
+  background-position: -96px -216px;
+}
+.icon-YESB{
+  background-position: -192px -216px;
+}
+
+.icon-cashcard_AMON_0{
+  background-position: 0px -252px;
+}
+.icon-cashcard_CPMC_1{
+  background-position: -96px -252px;
+}
+.icon-cashcard_DONE_0{
+  background-position: -192px -252px;
+}
+.icon-cashcard_ICASH_0{
+  background-position: -288px -252px;
+}
+.icon-cashcard_ITZC_0{
+  background-position: -384px -252px;
+}
+.icon-cashcard_OXI_0{
+  background-position: -480px -252px;
+}
+.icon-cashcard_OXICASH_0{
+    background-position: -480px -252px;
+}
+.icon-cashcard_PAYCASH_0{
+  background-position: -576px -252px;
+}
+.icon-cashcard_PAYZ_0{
+  background-position: -672px -252px;
+}
+.icon-cashcard_YESW_0{
+  background-position: -768px -252px;
+}
+.icon-cashcard_YPAY_0{
+  background-position: -864px -252px;
+}
+.icon-cashcard_ZIPCASH_0{
+  background-position: 0px -288px;
+}
+.icon-cashcard_OLAM_0{
+    background-position: -192px -288px;
+}
+.icon-cashcard_FREC_0{
+    background-position: -96px -288px;
+}
+.icon-cashcard_INDNEFT_0{
+    background-position: -864px -72px;
+}
+.icon-cashcard_CIPW_0{
+  background-position: -1341px -612px;
+}
+.icon-cashcard_IDM_0{
+  background-position: -1247px -612px;
+}
+.icon-cashcard_VM3_0{
+  background-position: -1441px -612px;
+}
+.icon-BHNB {
+  background-position: -1343px -540px;
+}
+.icon-IDFCNB {
+  background-position: -480px -216px;
+}
+.icon-AIRNB{
+  background-position: -580px -217px;
+}
+
+.icon-cashcard_JIOM_0{
+	background-position: -571px -288px;
+}
+
+.icon-cashcard_PHONEPE_0{
+	background-position: -668px -288px;
+}
+
+.pnote.nocostemi-note {
+  border-style: solid;
+  border-color: #00aeef;
+  border-width: 1px 0 1px 0;
+    font-size: 12px;
+    line-height: 21px;
+    padding: 10px;
+    text-align: left !important;
+    width: 97.4%!important;
+}
+.pnote.center {
+  text-align: center;
+}
+.no-cost-emi-message-container .row{
+  display: block;
+  line-height: 20px;
+}
+.no-cost-emi-message-container .row .note-label {
+  float: left;
+}
+.no-cost-emi-message-container .row .note-value {
+  float: right;
+}
+.no-cost-emi-message-container .row hr{
+  border-top: 1px solid #ccc;
+}
+.no-cost-emi-message-container .row .hr-height{
+  margin: 10px 0;
+}
+.clearfix{
+  clear: both;
+}
+.no-cost-emi-message-container .note-label, .no-cost-emi-message-container .note-value{
+  padding: 1px 0 0 5px!important;
+}
+
+/* [ Create rows and columns ] */
+.pm-row {
+    display: block;
+}
+
+.pm-alert {
+    display: inline-block;
+    padding: 1.5em 0.5em;
+}
+
+.pm-alert.pm-alert-success {
+    background: #d2f0fc;
+    color: #31708f;
+    box-shadow: -2px 0px 1px blue;
+}
+
+.pm-alert.pm-alert-error {
+    background: #f2dede;
+    color: #a94442;
+    box-shadow: -2px 0px 1px red;
+}
+
+.pm-col-sm-12{display:inline-block; width:100%}
+.pm-col-sm-11{display:inline-block; width:91.66666667%}
+.pm-col-sm-10{display:inline-block; width:83.33333333%}
+.pm-col-sm-9{display:inline-block; width:75%}
+.pm-col-sm-8{display:inline-block; width:66.66666667%}
+.pm-col-sm-7{display:inline-block; width:58.33333333%}
+.pm-col-sm-6{display:inline-block; width:50%}
+.pm-col-sm-5{display:inline-block; width:41.66666667%}
+.pm-col-sm-4{display:inline-block; width:33.33333333%}
+.pm-col-sm-3{display:inline-block; width:25%}
+.pm-col-sm-2{display:inline-block; width:16.66666667%}
+.pm-col-sm-1{display:inline-block; width:8.33333333%}
+
+.col-sm-offset-12{margin-left:100%}
+.col-sm-offset-11{margin-left:91.66666667%}
+.col-sm-offset-10{margin-left:83.33333333%}
+.col-sm-offset-9{margin-left:75%}
+.col-sm-offset-8{margin-left:66.66666667%}
+.col-sm-offset-7{margin-left:58.33333333%}
+.col-sm-offset-6{margin-left:50%}
+.col-sm-offset-5{margin-left:41.66666667%}
+.col-sm-offset-4{margin-left:33.33333333%}
+.col-sm-offset-3{margin-left:25%}
+.col-sm-offset-2{margin-left:16.66666667%}
+.col-sm-offset-1{margin-left:8.33333333%}
+.col-sm-offset-0{margin-left:0}
+
+/* Vertical Offset Bottom */
+
+.vert-offset-top-12 {
+    margin-top: 12em;
+}
+
+.vert-offset-top-11 {
+    margin-top: 11em;
+}
+
+.vert-offset-top-10 {
+    margin-top: 10em;
+}
+
+.vert-offset-top-9 {
+    margin-top: 9em;
+}
+
+.vert-offset-top-8 {
+    margin-top: 8em;
+}
+
+.vert-offset-top-7 {
+    margin-top: 7em;
+}
+
+.vert-offset-top-6 {
+    margin-top: 6em;
+}
+
+.vert-offset-top-5 {
+    margin-top: 5em;
+}
+
+.vert-offset-top-4 {
+    margin-top: 4em;
+}
+
+.vert-offset-top-3 {
+    margin-top: 3em;
+}
+
+.vert-offset-top-2 {
+    margin-top: 2em;
+}
+
+.vert-offset-top-1 {
+    margin-top: 1em;
+}
+
+.vert-offset-top-0 {
+    margin-top: 0em;
+}
+/* Vertical Offset Bottom */
+
+.vert-offset-bottom-12 {
+    margin-bottom: 12em;
+}
+
+.vert-offset-bottom-11 {
+    margin-bottom: 11em;
+}
+
+.vert-offset-bottom-10 {
+    margin-bottom: 10em;
+}
+
+.vert-offset-bottom-9 {
+    margin-bottom: 9em;
+}
+
+.vert-offset-bottom-8 {
+    margin-bottom: 8em;
+}
+
+.vert-offset-bottom-7 {
+    margin-bottom: 7em;
+}
+
+.vert-offset-bottom-6 {
+    margin-bottom: 6em;
+}
+
+.vert-offset-bottom-5 {
+    margin-bottom: 5em;
+}
+
+.vert-offset-bottom-4 {
+    margin-bottom: 4em;
+}
+
+.vert-offset-bottom-3 {
+    margin-bottom: 3em;
+}
+
+.vert-offset-bottom-2 {
+    margin-bottom: 2em;
+}
+
+.vert-offset-bottom-1 {
+    margin-bottom: 1em;
+}
+
+.vert-offset-bottom-0 {
+    margin-bottom: 0em;
+}
+
+.pm-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+.pm-btn.pm-btn-sm {
+    padding: 1px 18px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.pm-btn.pm-btn-success {
+    background-color: #0086bf;
+    color: #fff;
+    border: 1px solid #0086bf;
+}
+.pm-btn.pm-btn-primary {
+  background-color: #00aeef;
+    background-image: none;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: none;
+}
+.pm-btn.pm-btn-default {
+    background: #fff;
+    color: #0086bf;
+    border: 1px solid #0086bf;
+}
+.text-center {
+  text-align: center;
+}
+/* [/ Create rows and columns ] */
+
+/* Paypal CSS */
+/*PaisaWallet Tab CSS*/
+#PayPalForm{width:100%;float:left;}
+#PayPalForm h1{color:#000000;text-align:left;font-size:1.3em;font-weight:700;float:left;margin-top:7px;}
+#PayPalForm .max_msg{text-align:left;color:#000;margin:10px 0;}
+#PayPalForm .card_support{padding-bottom:10px;clear:both;}
+#PayPalForm .card_support .wallet_info{color:#666;}
+#PayPalForm .card_support .wallet_info span{margin-right:6px;display:block;float:left;width:16px;height:15px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -408px -13px;}
+#PayPalForm .card_image{float:right;background:url(/images/paypal_paymentoptions.jpg?v=1.2) no-repeat;height:28px;width:158px;margin-left:10px;padding-top:10px;}
+#PayPalForm .form_container{padding:0 0 25px;float:left;position:relative;width:100%;}
+#PayPalForm .form_container .form_label{color:#000;font-size:14px;font-weight:700;clear:both;display:block;margin-bottom:20px;margin-top:15px;}
+#PayPalForm .form_container .wallet_form{float:left;width:45%;}
+#PayPalForm .form_container .wallet_form .wallet_email{border:1px solid #7e9db9;overflow:auto;margin-bottom:10px;padding:7px 5px 4px;}
+#PayPalForm .form_container .wallet_form .wallet_email span{display:block;float:left;width:22px;height:20px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -438px -11px;}
+#PayPalForm .form_container .wallet_form .wallet_email input{border:none;outline:none;float:left;margin-left:10px;margin-top:2px;width:84%;padding:0;}
+#PayPalForm .form_container .wallet_form .wallet_mobile{border:1px solid #7e9db9;overflow:auto;padding:7px 5px 5px;}
+#PayPalForm .form_container .wallet_form .wallet_mobile span{display:block;float:left;width:22px;height:20px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -470px -11px;}
+#PayPalForm .form_container .wallet_form .wallet_mobile input{border:none;outline:none;float:left;margin-left:10px;margin-top:2px;width:84%;padding:0;}
+#PayPalForm .form_container .info_div{float:left;width:50%;text-align:left;background:#e3f6fd;padding:14px 20px;}
+#PayPalForm .form_container .info_div .left_heading{color:#000;font-weight:700;font-size:1.3em;}
+#PayPalForm .form_container .info_div a{color:#00aeef;font-weight:700;text-decoration:underline;margin-top:10px;display:inline-block;position:relative;}
+#PayPalForm .form_container .info_div a .link_info{position:absolute;right:-21px;top:-1px;background:url(../../images/payu_paisa_wallet_icon_strip.png?v=1.1) no-repeat -501px -13px;display:inline-block;width:15px;height:15px;}
+#PayPalForm .form_container .how_info_div{position:absolute;background:#FFF;padding:5px;border:1px solid #AAA;top:7px;left:164px;width:224px;}
+#PayPalForm .form_container .error_bdr{background:#fdc6c6;color:#bf0303;border-color:#bf0303!important;}
+#PayPalForm .form_container .error_bdr input{background:#fdc6c6;color:#bf0303;}
+#PayPalForm .form_info{text-align:left;clear:both;overflow:auto;padding:0 0 25px;}
+#PayPalForm .form_info h1.black{color:#000;font-weight:400;text-align:left;margin:10px 0;}
+#PayPalForm .form_info h1.bold{text-align:left;margin:10px 0;}
+#PayPalForm .form_container .button_container{width:100%;clear:both;padding-top:15px;overflow:auto;}
+#PayPalForm .form_container .button_container .button{background-color:#00AEEF;background-image:none;border:1px solid #FFF;border-radius:0;color:#FFF;cursor:pointer;font-size:1.2em;font-weight:700;padding:10px 25px;}
+#PayPalForm .form_container .button_container .button:hover{background-color:#0695CA;}
+#PayPalForm .form_container .button_container div{display:inline-block;margin:10px 0;}
+#PayPalForm .form_container .button_container div a{float:none;}
+
+
+
+
+#paypal .button_container {
+ text-align: center;
+}
+
+.paypal-button {
+  background-color: #00aeef;
+  border: 1px solid #00aeef;
+  padding: 12px 15px 12px 15px;
+  color:#ffffff;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  opacity: .8;
+}
+
+.paypal-button:hover {
+  opacity: 1;
+
+}
+
+.paypal-button .paypalbtn-icon {
+  background:url('/images/paypalbtn.png') no-repeat 0 0;
+  display: inline-block;
+  width: 73px;
+  height:20px;
+  vertical-align: middle;
+  margin-left: 12px;
+}
+
+.highlight-text{
+  color: #00AEEF;
+  font-weight: bold;
+}
+input[type="submit"].credit_pay_button:disabled {
+    background: #bbb!important;
+}
+input[type="submit"].debit_pay_button:disabled {
+    background: #bbb!important;
+}
+.custom-tooltip {
+  position:relative;
+  top: 3px;
+}
+
+.custom-tooltip:hover .inner-container{
+  display:block;
+}
+.custom-tooltip .inner-container *{
+  box-sizing: border-box;
+}
+.custom-tooltip .inner-container {
+  display:none;
+  width: 500px;
+  min-height: 100px;
+  background-color: #fffab2;
+  border: solid 1px #00adf2;
+  position: absolute;
+  padding: 15px;
+  text-align: left;
+  font-size: 12px;
+  color: #4a4a4a;
+  font-weight: 300;
+  line-height: 1.2em;
+  box-sizing: border-box;
+}
+
+.custom-tooltip .inner-container.open {
+  display: block;
+}
+.currency-block {
+  display: inline-block;
+  padding-top: 9px;
+}
+#payment .payment-box .currency-block label{
+  float: none;
+  padding-left: 5px;
+  padding-right: 10px;
+  font-weight: normal;
+}
+#payment .payment-box .currency-block input[type="radio"]:checked+label,
+#payment .payment-box .currency-block input[type="radio"]:checked+select {
+  font-weight: bold;
+}
+
+#payment .payment-box .currency-block select {
+  float: none;
+  margin:0;
+}
+.notify-currency{
+    display:none;
+}
+
+.info-container {
+  text-align: center;
+  padding: 12px 15px 11px;
+  font-size: 14px;
+  background-color: #fffab2;
+  box-shadow: inset 0 -1px 0 0 #00adf2;
+  position: relative;
+  z-index: 9;
+}
+.mcp_cont{margin-top:10px;}
+.order-summary .inr-equiv {
+  display: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: #ffffff;
+}
+.order-summary .inr-equiv span {
+  font-weight: inherit;
+  font-size: inherit;
+}
+/**visa checkout css*/
+.visac{
+    height: 51px;
+    width: 217px;
+    border: none;
+    margin-left: 139px;
+}
+.loader-visa{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0,0.7);
+    top: 0;
+    left: 0;
+    z-index: 9998;
+    display:none;
+}
+.loader-div{
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -58px;
+}
+
+.paypal-currency-section {}
+
+.paypal-currency-section input{}
+
+.paypal-currency-section .paypal-main-heading {
+    width:100%;display:inline-block;padding-bottom:47px;
+}
+.paypal-currency-section .paypal-logo {
+    color:#000000; margin-right: 10px;
+    padding-left: 20px;display: inline-block; vertical-align: top;padding-top: 10px;
+}
+.paypal-currency-section .paypal-text {
+    color:#000000;border-left:#cccccc solid 1px; padding-left: 10px;display:inline-block;width:72%;
+}
+.paypal-currency-section .paypal-currency-list {width: 400px;margin: 0 auto;}
+
+.paypal-currency-section .paypal-currency-list p {float:none;}
+.paypal-currency-section .paypal-currency-list ul {list-style: none;background: none; width:410px;}
+.paypal-currency-section .paypal-currency-list ul li{border:#dedede solid 1px; background: #fafafa;line-height: normal; padding:8px 10px;width:160px;margin-right: 23px;float: left; margin-bottom: 23px;}
+#payment .payment-box .paypal-input{display:inline-block;padding:0;float:left; margin: 15px 0 0 0;}
+.paypal-currency-section .paypal-label-wrap {display:inline-block;padding-left:10px;}
+.paypal-currency-section .paypal-label-wrap .abc {font-size: 18px;color:#78726b;font-weight: normal;}
+
+.emi-form .icici_dc_message_box {width: 55%; padding: 10px; text-align: left !important; border: 1px solid #FFB062; font-size: 12px; line-height: 16px; font-weight: bold; margin-top: 5px;}
+
+
+
+#google-tez-box .input-container input{
+	width:100%;
+	font-weight: 200;
+	font-size:12px;
+}
+
+#tez-row{
+	padding-top: 12px;
+	font-weight: normal;
+	vertical-align: top;
+}
+
+.google-tez-box .bottom-padding{
+	padding-bottom: 51px;
+}
+
+.google-tez-box .at-the-rate{
+	display:inline-block;width: 26px;min-height:50px;vertical-align: middle;padding-top: 6px;font-size:18px;font-weight:bold;
+}
+
+.elements-container label[for=tez_vpa],.elements-container label[for=vpa-bank]{
+	display: block;
+	width: 130px;
+	padding: 3px;
+	vertical-align: top;
+	position:absolute;	
+}
+
+.google-tez-box .elementsDiv {
+	display:inline-block;
+	width: 130px;
+	min-height:75px;
+	vertical-align: top;
+	margin-right: 16px;
+	position:relative;
+}
+
+.google-tez-box .input-container{
+	margin-top:0;
+}
+
+.google-tez-box .input-container #pay_button{
+	width:25%;margin-left:13px;
+}
+
+.google-tez-box #vpa-bank{
+	width:120px;height:27px;margin-bottom:5px;-webkit-appearance: menulist-button;
+}
+
+.google-tez-box #vpa-bank.error{
+	background:inherit;
+	color:inherit;
+	border:1px solid #bbb;
+}
+
+.tez-message {
+  width: 416.9px;
+  background-color: #f5f5f5;
+  padding: 22px;
+}
+
+
+.Dont-have-a-Tez-UPI {
+  width: 372px;
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.Dont-have-a-Tez-UPI .text-style-1 {
+  color: #205af1;
+}
+
+.tez-links-web{
+	padding:20px;
+}
+
+
+#payment #sodexo .eye {width: 13px;height: 13px;border-radius:  75% 15%;position: absolute;top:30%;right:33%;transform: rotate(45deg);background-color:#666666;cursor:pointer;}
+#payment #sodexo .eye:before {content: '';display: block;position: absolute;width: 5px;height: 5px;border: 1px solid #ffffff;border-radius: 50%;left: 3px;top: 3px;}
+
+#payment #sodexo fieldset{float:right;width:93%;}
+#payment #sodexo fieldset .relative{position:relative;}
+#payment #sodexo .payment-box fieldset label{text-align:left;width:150px;}
+#payment #sodexo .payment-box fieldset label.error{float:right !important;width:auto;}
+#payment #sodexo .payment-box fieldset .payment-buttons{text-align:center;margin-right:10px;}
+#payment #sodexo .payment-box fieldset .payment-buttons #pay_button.disabled{color:#66cdf8;}
+#payment #sodexo #sodexo-note{margin: 35px auto 0 auto;width: 75%;}
+#payment #sodexo #sodexo-note ol li{padding: 5px 0;}
+#payment #sodexo #sodexo-logo {background:url(/images/sodexo_logo.png?v=1.0) no-repeat;width:165px;height:54px;margin:30px auto 15px auto;}
+
+.freecharge_cashback {padding: 7px 10px -5px; background: #fffab2; text-align: center;}
+.freecharge_cashback p { margin-bottom:  0px;}
+
+
+.loanemi-button {
+  background-color: #EE6825;
+  border: 1px solid #EE6825;
+  padding: 12px 15px 12px 15px;
+  color:#ffffff;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  opacity: .8;
+}
+ 
+.loanemi table{
+	margin-bottom: 1px;
+}
+
+.loanemi tbody {
+	background: #F5FAFD;
+	border: 1px dotted #2BB0E8;
+}
+
+.loanemi table tbody tr th{
+	background: #F5FAFD;
+	border: 1px dashed #2BB0E8;
+}
+
+
+.loanemi table tbody tr td{
+	background: #F5FAFD;
+	border: 1px dashed #2BB0E8;
+	font-weight: bold;
+	color: #2BB0E8;
+}
+
+
+
+.loanemi th, td, caption{
+	padding:12px 10px 7px 7px;
+}
+
+.loanemi .note{
+	font-size: 8px;
+}
+
+.loanemi .tcndiv {
+	font-size: 10px;
+	margin-bottom: 15px;
+	width: 350px;
+}
+
+#loanemi #tcndiv label {
+	float: right !important;
+	margin-top: -4px;
+	margin-right: -50px;
+}
+
+
+
+.loanemi .image_kred{
+	margin:10px 0px 10px 0px;
+}
+
+.loanemi #Loanemiform  .row .tcndiv .tcncheckbox{
+	float:left;
+	margin-top: 2px;
+}
+
+#Loanemiform .tcndiv a {
+	text-decoration: underline;
+}
+
+.ui-tabs .ui-tabs-nav li a.loanemi{background-image:url(/images/kreditech/new_pointer.png?v=1.3);background-repeat:no-repeat; background-position:89px 6px;}
+
+/*Cardless emi*/
+
+.cardlessemi-button {
+  background-color: #00AEEF;
+  border: 1px solid #00AEEF;
+  padding: 12px 15px 12px 15px;
+  color:#ffffff;
+  position: relative;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 300ms;
+  opacity: .8;
+}
+ 
+.cardlessemi table{
+	margin-bottom: 1px;
+}
+
+.cardlessemi tbody {
+	background: #F5FAFD;
+	border: 1px dotted #2BB0E8;
+}
+
+.cardlessemi table tbody tr th{
+	background: #F5FAFD;
+	border: 1px dashed #2BB0E8;
+}
+
+
+.cardlessemi table tbody tr td{
+	background: #F5FAFD;
+	border: 1px dashed #2BB0E8;
+	font-weight: bold;
+	color: #2BB0E8;
+}
+
+
+
+.cardlessemi th, td, caption{
+	padding:12px 10px 7px 7px;
+}
+
+.cardlessemi .note{
+	font-size: 9px;
+}
+
+.cardlessemi .tcndiv {
+	font-size: 10px;
+	margin-bottom: 15px;
+	width: 350px;
+}
+
+#cardlessemi #tcndiv label {
+	float: right !important;
+	margin-top: -4px;
+	margin-right: -50px;
+}
+
+
+
+.cardlessemi .image_kred{
+	margin:10px 0px 10px 0px;
+}
+
+.cardlessemi #cardlessemiform  .row .tcndiv .tcncheckbox{
+	float:left;
+	margin-top: 2px;
+}
+
+#cardlessemiform .tcndiv a {
+	text-decoration: underline;
+}
+
+.ui-tabs .ui-tabs-nav li a.cardlessemi{background-image:url(/images/kreditech/new_pointer.png?v=1.3);background-repeat:no-repeat; background-position:89px 6px;}
+.ui-tabs .ui-tabs-nav .cardlessemitabpadding {padding: 4px 9px 5px 11px;}
+
+.kredTncModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.kredTncModal .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+}
+
+/* The Close Button */
+.kredTncModal .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.kredTncModal .close:hover,
+.kredTncModal .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.kredTncModal .heading{
+	margin-top: 40px;
+}
+
+.kredTncModal h3{
+	text-align: center;
+	margin-top: 10px;
+}
+.secure_image {
+	text-align: left;
+}
+
+.secure_image .container{
+  display: inline-block;
+  width:140px;
+
+}
+.secure_image .imagetext{
+  display: inline-block;
+  font-size: 9px;
+  vertical-align: super;
+}
+
+
+#conv_details tbody tr:nth-child(even) td, tbody tr.even td{
+	background: none;
+}
+
+#conv_details table td,th{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

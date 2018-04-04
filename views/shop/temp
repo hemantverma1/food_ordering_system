@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" class="js csstransforms gr__secure_payu_in" lang="en">
    <head>
@@ -355,7 +357,7 @@
                   Invalid card number. Please re-enter the card details and click Pay
                   Now.
                </div>
-               <form action="/checkout" method="post" novalidate="novalidate" id="paymentForm">	
+               <form action="/checkout" method="post" novalidate="novalidate" id="checkout-form">	
                <!-- <form id="paymentForm" method="post" action="pay" autocomplete="off" novalidate="novalidate"> id="checkout-form"  -->
                   <input name="txtid" value="23b515dfdf0161ee2396ba143e118c2a" type="hidden"> <input name="window3DUsed" value="" id="window3DUsed" type="hidden"> <input name="paymentparams" id="paymentparams" type="hidden">
 
@@ -647,10 +649,10 @@
                            </div>
                         </div>
                         <span style="clear: both"></span>
-                        <div class="payment-buttons append-bottom">
+                        <!-- <div class="payment-buttons append-bottom"> -->
 							<button type="submit" class="btn btn-success">Pay Now</button>
                            <!-- <input name="pay_button" style="margin-right: 75px;" value="Pay Now" onclick="form_params();" class=" credit_pay_button" id="pay_button" type="submit"> -->
-                        </div>
+                        <!-- </div> -->
                      </div>
                      <div id="debit" class="pcpPanel ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" style="min-height: 443px;">
                         <div class="info-container notify-currency"></div>
@@ -1009,10 +1011,23 @@
                                  <p id="error_container" class="error pm-col-sm-8 vert-offset-top-1 hidden"></p>
                                  <p id="success_container" class="success pm-col-sm-8 vert-offset-top-1 hidden"></p>
                                  <fieldset id="lazypay-details" class="vert-offset-top-2">
-
+                                    <div class="input-container row">
+                                       <label class="pm-col-sm-2 caption"> Phone number </label>
+                                       <div class="pm-col-sm-9 float-left"> 
+                                          <input name="lazypay_mobile" id="lazypay_mobile" class="required text" placeholder="eg. 9876543210" value="9502385856" disabled="disabled" type="text">
+                                       </div>
+                                    </div>
+                                    <div class="input-container row">
+                                       <label class="pm-col-sm-2 caption"> Email </label>
+                                       <div class="pm-col-sm-9 float-left"> 
+                                          <input name="lazypay_email" id="lazypay_email" class="required text" placeholder="eg. johndoe@example.com" value="regularshow33@hotmail.com" disabled="disabled" type="text">
+                                       </div>
+                                    </div>
                                     <div class="input-container row vert-offset-top-2">
                                        <label class="pm-col-sm-2"> &nbsp; </label>
-                                       <button type="submit" class="btn btn-success">Confirm</button>
+                                       <button id="check-if-registered" type="button" class="pm-btn pm-btn-primary pm-col-sm-4 " onclick="paymentLazyPay.checkIfRegsiteredLazyPay()">
+                                       Proceed
+                                       </button>
                                     </div>
                                     <div class="row vert-offset-top-1">
                                        <label class="pm-col-sm-2"> &nbsp; </label>
@@ -1141,7 +1156,7 @@
       <script src="PayUbiz_files/payment.js"></script>
       <script src="PayUbiz_files/_jscriptAPI"></script>
       <script>var serviceTax = '{"default":"18","creditcard":0,"debitcard":0,"emi":0,"amexz":0}'</script>
-      <script src="PayUbiz_files/payment_002.js"></script>
+      // <script src="PayUbiz_files/payment_002.js"></script>
       <!--<script src="https://static.payu.in/js/new.jquery.validate.min.js"></script>
          <script src="https://static.payu.in/js/jquery.payment.min.js?version=1.0.9"></script>
          <script src="https://static.payu.in/js/payuscript.min.js?version=1.6.35"></script>
@@ -1743,3 +1758,60 @@
    </body>
 </html>
 
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<title>Checkout</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#cod").click(function(){
+		document.getElementById("if").src = "cod.html";        
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#card").click(function(){
+		document.getElementById("if").src = "card.html";        
+    });
+});
+</script>
+</head>
+
+<body>
+	<h2>Checkout</h2>
+	<h4>Total: Rs{{total}}</h4>
+	<div id="charge-error" class="alert alert-danger {{#if noError}}hidden{{/if}}">
+		{{errMsg}}
+	</div>
+
+    <div>
+		<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:15%" height="50%">
+		  <h3 class="w3-bar-item">Payment Mode</h3>
+		  <button id="cod" class="w3-bar-item w3-button">COD</button>
+		  <button id="card" class="w3-bar-item w3-button">Card</button>
+		</div>
+
+		<div style="margin-left:20%">
+
+			<div class="w3-container w3-teal">
+			  <h1>CheckOut</h1>
+			</div>
+
+
+			<iframe src="paymentOptions.html" id="if" width="100%" height="400px">
+			  <p>Your browser does not support iframes.</p>
+			</iframe>
+
+		</div>
+	</div>
+	
+</body>
+</html>
+ -->
