@@ -16,6 +16,9 @@ var routes = require('./routes/index');
 var userRoutes = require('./routes/user');
 var adminRoutes = require('./routes/admin');
 
+var {User,SuperUser} = require('./models/user');
+
+
 var app = express();
 
 mongoose.connect(process.env.MONGO_DB_URI);
@@ -45,6 +48,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
     res.locals.login = req.isAuthenticated();
+    if(req.isAuthenticated()==true)
+    {
+      SuperUser.count({_id: req.user._id}, function (err, count){ 
+      if(count>0){
+        res.locals.admin=true;
+          }
+      else{
+        res.locals.admin=false;
+      }
+      }); 
+    }
     res.locals.session = req.session;
     next();
 });

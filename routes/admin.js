@@ -67,7 +67,7 @@ router.post('/signin', passport.authenticate('local.supersignin', {
   }
 });
 
-router.get('/modify-item', function(req, res, next) {
+router.get('/modify-item', isLoggedIn, function(req, res, next) {
   var successMsg = req.flash('success')[0];
   Product.find(function(err, docs) {
     console.log(docs.length);
@@ -85,19 +85,19 @@ router.get('/modify-item', function(req, res, next) {
   });
 });
 
-router.get('/remove-item/:id', function(req, res, next) {
+router.get('/remove-item/:id',isLoggedIn, function(req, res, next) {
   Product.findByIdAndRemove(req.params.id, function (err) {});
   res.redirect('/admin/modify-item');
 });
 
 
-router.get('/add-item', function(req, res, next) {
+router.get('/add-item',isLoggedIn, function(req, res, next) {
     res.render('shop/add-item',{
     csrfToken: req.csrfToken()});
 });
 
 
-router.post('/add-item', function(req, res, next) {
+router.post('/add-item',isLoggedIn, function(req, res, next) {
   upload(req, res, function(err) {
   var item = Product.create({title: req.body.title_field, description: req.body.desc_field, price: req.body.price_field, imagePath: req.files[0].path}, function (err) { console.log(err)});
   });
