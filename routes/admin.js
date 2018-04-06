@@ -42,7 +42,7 @@ var upload = multer({
 
 
 router.get('/', isLoggedIn, function(req, res) {
-    res.send('Success');
+    res.redirect('/admin/modify-item');
 });
 
 router.get('/signin', function(req, res, next) {
