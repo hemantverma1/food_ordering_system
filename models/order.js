@@ -6,7 +6,9 @@ var schema = new Schema({
     cart: {type: Object, required: true},
     date: {type: String, required: true},
     time: {type: String, required: true},
-    status: {type: String, required: true},
+    preparing: {type: Boolean, required: true},
+    ontheway:  {type: Boolean, required: true},
+    delivered: {type: Boolean, required: true},
     address: {type: String, required: true},
     name: {type: String, required: true},
     paymentId: {type: String, required: true}

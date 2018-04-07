@@ -99,7 +99,9 @@ router.post('/checkout', isLoggedIn, function(req, res, next) {
     paymentId: 'COD',
     date: getdatestr(),
     time: gettimestr(),
-    status: 'Pending'
+    preparing: true,
+    ontheway: false,
+    delivered: false
   });
 
   order.save(function(err, result) {
