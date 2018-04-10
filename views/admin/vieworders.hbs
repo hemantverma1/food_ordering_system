@@ -7,13 +7,13 @@
         <thead>
         <tr>
           <th></th>
-          <th width="180">Created</th>
-          <th width="15%">Customer</th>
+          <th >Created</th>
+          <th >Customer</th>
           <th>Description</th>
-          <th width="5%">Total Quantity</th>
-          <th width="10%">Total Price</th>
-          <th width="100">Status</th>
-          <th width="180">Actions</th>
+          <th>Total Quantity</th>
+          <th>Total Price</th>
+          <th >Status</th>
+          <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -32,7 +32,7 @@
 
           <td>
           {{# each this.cart.items }}
-          <strong>{{ this.item.title }}</strong><br/> : {{ this.qty }} x <span class="badge"> ₹ {{ this.price }}</span> <br/>
+          {{ this.qty }} x <span class="badge"> ₹ {{ this.price }}</span> : <strong>{{ this.item.title }}</strong>  <br/>
           {{/each}}
           </td>
 
@@ -55,7 +55,7 @@
           </td>
 
           <td>
-            <a href="remove-order/{{this._id}}" class="delete btn btn-danger" role="button">Delete</a><br/>
+            <a href="remove-order/{{this._id}}" class="delete btn btn-danger" role="button">Delete</a> <br/>
             <a href="ontheway-order/{{this._id}}" class="view btn btn-primary " role="button">On the Way</a><br/>
             <a href="delivered-order/{{this._id}}" class="process btn btn-success " role="button">Delivered</a>
           </td>
