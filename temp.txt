@@ -1,4 +1,0 @@
-
-> food-ordering-system@0.0.2 start /home/lola/4-2/Software/Project/food_ordering_system
-> node ./bin/www
-
