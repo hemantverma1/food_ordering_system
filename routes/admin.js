@@ -134,6 +134,7 @@ router.get('/modify-item', isLoggedIn, function(req, res, next) {
 
 router.get('/remove-item/:id',isLoggedIn, function(req, res, next) {
   Product.findByIdAndRemove(req.params.id, function (err) {});
+  req.flash('success', 'Item removed from the Menu');
   res.redirect('/admin/modify-item');
 });
 
@@ -146,7 +147,7 @@ router.get('/add-item',isLoggedIn, function(req, res, next) {
 
 router.post('/add-item',isLoggedIn, function(req, res, next) {
   upload(req, res, function(err) {
-  var item = Product.create({title: req.body.title_field, description: req.body.desc_field, price: req.body.price_field, imagePath: req.files[0].path}, function (err) { console.log(err)});
+    var item = Product.create({title: req.body.title_field, description: req.body.desc_field, price: req.body.price_field, imagePath: req.files[0].path}, function (err) { console.log(err)});
   });
   res.redirect('/admin/modify-item');
 });
