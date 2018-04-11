@@ -20,7 +20,7 @@ router.get('/', function(req, res, next) {
       });
     });
     res.render('shop/index', {
-      title: 'Dominos Pizza',
+      title: 'Food Ordering System',
       products: productChunks,
       successMsg: successMsg,
       noMessages: !successMsg
