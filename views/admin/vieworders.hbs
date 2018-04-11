@@ -12,6 +12,7 @@
           <th>Description</th>
           <th>Total Quantity</th>
           <th>Total Price</th>
+          <th>Instructions</th>
           <th >Status</th>
           <th>Actions</th>
         </tr>
@@ -39,6 +40,7 @@
           <td>{{this.cart.totalQty}}</td>
 
           <td> ₹ {{this.cart.totalPrice}}</td>
+          <td> {{this.cart.instructions}}</td>
 
           <td>
             {{# if this.preparing }}

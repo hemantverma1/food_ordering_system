@@ -76,6 +76,15 @@ router.get('/shopping-cart', function(req, res, next) {
   });
 });
 
+router.post('/shopping-cart', function(req, res, next) {
+  var cart = new Cart(req.session.cart ? req.session.cart : {});
+  if(req.body.inst){
+    cart.addInstructions(req.body.inst);
+    req.session.cart = cart;
+  } 
+  return res.redirect('/checkout');
+});
+
 router.get('/checkout', isLoggedIn, function(req, res, next) {
   if (!req.session.cart) {
     return res.redirect('/shopping-cart');

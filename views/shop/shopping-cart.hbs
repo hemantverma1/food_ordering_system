@@ -24,12 +24,25 @@
             <strong>Total: {{ totalPrice }}</strong>
         </div>
     </div>
-    <hr>
-    <div class="row">
-        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
-            <a href="/checkout" type="button" class="btn btn-success">Checkout</a>
+
+    <form action="/shopping-cart" method="post" id="checkout-form">
+        <h3 align=center> Delivery/Food instructions </h3>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+                <input type="text" id="inst" class="form-control" size= 100 name="inst">
+            </div>
         </div>
-    </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+                 <button type="submit" class="btn btn-success">Checkout</button>
+            </div>
+        </div>
+
+    </form>
+
 {{ else }}
     <div class="row">
         <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
