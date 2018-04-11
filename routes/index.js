@@ -9,12 +9,16 @@ var Order = require('../models/order');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var successMsg = req.flash('success')[0];
-  Product.find(function(err, docs) {
-    var productChunks = [];
-    var chunkSize = 3;
-    for (var i = 0; i < docs.length; i += chunkSize) {
-      productChunks.push(docs.slice(i, i + chunkSize));
-    }
+  var productChunks = {};
+  Product.distinct('category', function(err, categories){
+    categories.forEach(function(cat) {
+      productChunks[cat] = [];
+      Product.find({category : cat}, function(err, docs){
+        docs.forEach((item) => {
+          productChunks[cat].push(item);
+        });
+      });
+    });
     res.render('shop/index', {
       title: 'Dominos Pizza',
       products: productChunks,

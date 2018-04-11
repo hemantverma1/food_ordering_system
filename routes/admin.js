@@ -116,13 +116,16 @@ router.post('/signin', passport.authenticate('local.supersignin', {
 
 router.get('/modify-item', isLoggedIn, function(req, res, next) {
   var successMsg = req.flash('success')[0];
-  Product.find(function(err, docs) {
-    console.log(docs.length);
-    var productChunks = [];
-    var chunkSize = 3;
-    for (var i = 0; i < docs.length; i += chunkSize) {
-      productChunks.push(docs.slice(i, i + chunkSize));
-    }
+  var productChunks = {};
+  Product.distinct('category', function(err, categories){
+    categories.forEach(function(cat) {
+      productChunks[cat] = [];
+      Product.find({category : cat}, function(err, docs){
+        docs.forEach((item) => {
+          productChunks[cat].push(item);
+        });
+      });
+    });
     res.render('shop/modify-item', {
       title: 'Dominos Pizza',
       products: productChunks,
