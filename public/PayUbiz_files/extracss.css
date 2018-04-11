@@ -1,0 +1,124 @@
+#payment .payment-box{float:left;width:562px;padding-bottom:10px;margin-bottom:10px;}
+#payment .payment-box fieldset label.error{position:static!important;float:left!important;border-radius:0!important;left:0!important;top:0!important;border:1px #999 solid;display:inline;font-size:11px;margin:7px 5px 0 0;}
+#payment .payment-box p.dropdowns{float:left;width:528px;margin:0;}
+#payment .payment-box p.dropdowns label.error{float:right!important;clear:right!important;margin-right:70px!important;display:inline;}
+#payment .payment-box fieldset select{float:left;margin-right:5px;}
+#payment .payment-box fieldset input.required, #payment .payment-box fieldset input.req{float:left;margin-right:2px;display:inline;}
+#payment .pnote{padding-top:10px;float:left;padding-right:10px;padding-left:10px;width:270px;text-align:left;}
+fieldset.emi-card-form{float:left;width:578px;}
+p.redirect-message{float:left;width:250px;}
+p.p-endnote{float:left;width:100%;text-align:center;margin:0;padding:0;}
+.chk_outer{width:90%;clear:both;border-top:1px #ccc solid;padding-top:10px;text-align:center;margin:0 auto;}
+.chk_outer p.text{float:left;width:100%;text-align:center;margin:0!important;}
+.chk_outer p.text a{color:#00AEEF;text-decoration:none;}
+.chk_outer input{width:14px;height:14px;margin:0 10px 0 0 !important;}
+#payment .payment-box a.help-link.blue_text{color:#00AEEF;margin:0;}
+.card-name p,.debit-card-name p,.reward-card-name p{float:right!important;width:428px;}
+#learn_more .right{float:right;}
+#learn_more .clear{clear:both;}
+#learn_more .learn_main{width:742px;font:12px/14px Arial, Helvetica, sans-serif;margin:30px auto 0;}
+#learn_more .learn_mid{width:696px;background:url(../images/shadow_strip.png) repeat-y 0 0;display:inline-block;padding:0 0 13px 46px;}
+#learn_more .learn_mid h2{float:left;width:602px;background:url(../images/lock.gif) no-repeat 0 0;border-bottom:1px #d3d3d3 solid;font-size:14px;line-height:40px;color:#020202;padding:0 0 11px 48px;}
+#learn_more ul.learn_ftr{float:left;width:658px;border-bottom:1px #d3d3d3 solid;list-style:none;margin:0;padding:25px 0 0;}
+#learn_more ul.learn_ftr li{float:left;width:325px;padding-bottom:25px;}
+#learn_more ul.learn_ftr li h6{float:right;width:264px;font-size:14px;line-height:16px;color:#0000;}
+#learn_more ul.learn_ftr li p{float:right;width:264px;font-size:12px;line-height:20px;color:#666;}
+#learn_more .learn_mid a.green_btn{float:left;background:url(../images/button_bg.gif) no-repeat 0 0;padding-left:10px;color:#fff;text-decoration:none;}
+#learn_more .learn_mid a.green_btn span{float:left;cursor:pointer;background:url(../images/button_bg.gif) no-repeat right 0;line-height:32px;font-weight:700;font-size:14px;padding:0 21px 0 11px;}
+#learn_more .learn_mid p.spprt{float:left;width:658px;color:#666;font-size:15px;line-height:17px;margin:0;padding:16px 0 20px;}
+.ui-dialog-titlebar{display:none;}
+.payuCardDropDown.select{background:url(../images/new_select_bg.jpg) no-repeat scroll 0 0 transparent;color:#131313;display:inline;float:left;font-size:12px;height:32px;line-height:14px;margin-right:0;position:relative;text-align:left;width:213px;font:12px/14px Arial, Helvetica, sans-serif;}
+.payuCardDropDown.select .drop{border:1px #999 solid;border-top:none;float:left;left:0;position:absolute!important;top:28px;width:210px;background:#FFF;}
+.payuCardDropDown.select .drop_inner{float:left;position:relative;width:210px;}
+.payuCardDropDown.select .drop_inner ul{float:left;list-style:none outside none;width:210px;margin:0;padding:0;}
+.payuCardDropDown.select .drop_inner ul li{background:none repeat scroll 0 0 transparent!important;color:#C96;float:left;font-size:12px;line-height:16px;width:210px;padding:0!important;}
+.payuCardDropDown.select .drop_inner ul li a{color:#666;display:inline;border-bottom:1px #e2e2e2 solid;float:left;margin-left:1px;text-align:left;text-decoration:none;width:197px;overflow:hidden;padding:5px;}
+.payuCardDropDown.select .drop_inner ul li a:hover{background:#fffbed url(../images/dash_bg.gif) repeat-x 0 bottom;border-bottom:none;padding-bottom:6px;}
+.payuCardDropDown.select a.drop_image{background:url(../images/blank.gif) repeat scroll 0 0 transparent;display:inline;float:right;height:30px;left:0;position:absolute;top:0;width:200px;outline:none;}
+.payuCardDropDown.select span.slected{color:#404040;float:left;height:30px;line-height:32px;overflow:hidden;display:inline;width:182px!important;font-size:12px;margin:0 0 0 5px !important;}
+.payuCardDropDown.select span.slected img{float:left;margin-top:3px;}
+.payuCardDropDown.select span.slected small{font-size:12px;float:left;padding-left:5px;}
+.payuCardDropDown.select img.bottom_curve{float:left;position:absolute;left:-1px;bottom:-1px;}
+.payuCardDropDown.select .drop_inner ul li a img{float:left;color:#666;}
+.payuCardDropDown.select .drop_inner ul li a small{font-size:12px;float:left;padding-left:5px;line-height:20px;cursor:pointer;}
+.cards_main{width:363px;font:12px/14px Arial, Helvetica, sans-serif;margin:30px auto 0;}
+.cards_mid h2{float:left;width:261px;border-bottom:1px #d3d3d3 solid;font-size:14px;line-height:40px;color:#020202;padding:0;}
+.cards_mid{width:311px;background:url(../images/shadow_strip1.png) repeat-y 0 0;display:inline-block;padding:0 0 7px 52px;}
+.cards_mid p.top{float:left;width:235px;font-size:14px;line-height:20px;color:#666;overflow:hidden;padding:15px 0 0;}
+.cards_mid p.top span{color:#898989;}
+.cards_mid a.green_btn{float:left;background:#00AEEF;padding-left:10px;color:#FFF;text-decoration:none;margin-right:7px;display:inline;margin-top:15px;}
+.cards_mid a.green_btn span{float:left;cursor:pointer;background:#00AEEF;line-height:32px;font-weight:700;font-size:14px;padding:0 21px 0 11px;}
+.cards_mid a.grey_btn{float:left;background:#9b9b9b;padding-left:10px;color:#FFF;text-decoration:none;margin-top:15px;}
+.cards_mid a.grey_btn span{float:left;cursor:pointer;background:#9b9b9b;line-height:32px;font-weight:700;font-size:14px;padding:0 21px 0 11px;}
+.cards_mid p.bottom{float:left;font-size:11px;line-height:16px;color:#666;border-top:1px #d3d3d3 solid;margin-top:22px;padding-top:15px;width:261px;}
+#payment .payment-box fieldset input.text,#payment .payment-box fieldset input.password{width:200px!important;}
+#content{display:inline-block;}
+#content .pane{border-top:none;}
+.arrow_up{position:relative;width:0;height:0;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:10px solid #EFEFEF;z-index:100;}
+.div_info{position:relative;border:1px solid;width:100%;background:#EFEFEF;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;border-color:#ABABAB;padding:5px 0 5px 5px;}
+.overlay_img{cursor:pointer;color:#888;}
+.invalid_card_details{background:#fbe3e4;color:#8a1f11;border:1px #963C3F solid;font-size:11px;margin-left:120px;margin-bottom:10px;width:57%;border-radius:0;padding:4px 4px 4px 24px;}
+#dcvv_number,div.ui-tabs-panel,#payment .payment-box p,#payment .payment-box fieldset label,#learn_more .left{float:left;}
+#payment .payment-box fieldset .row,fieldset.emi-form,fieldset.dc-form,fieldset.dc-save,fieldset.cc-form, fieldset.rc-form,.card-name,.debit-card-name,.reward-card-name{float:left;width:100%;}
+.chk_outer p.text a:hover,#learn_more .learn_mid p.spprt a:hover,.cards_mid p.bottom a:hover{text-decoration:underline;}
+#learn_more .learn_mid p.spprt a,.cards_mid p.bottom a{color:#0368ba;text-decoration:none;}
+.sad_face{height:18px;width:18px;}
+.placeholder{color:#AAA !important;}
+.wallet_error{border-color:#bf0303 !important;background:#fdc6c6;color:#bf0303;}
+.wallet_error input{background-color:#fdc6c6 !important;}
+.pg_down_error, .error_form_div{overflow:auto;text-align:center;clear:both;font-weight:bold;background:#fbe3e4;color:#e42f17;border:1px #e42f17 solid;font-size:14px;margin:0 auto 0 26px;width:75%;border-radius:0;padding:4px;}
+.error_form_div{border-top:none;padding-top:10px;}
+.error_form_div p{color:#3d3d3d;font-weight:normal;font-size:11px;text-align:center;float:none !important;margin:0 0 5px 0;padding:0;}
+.error_form_div lable{font-size:12px;}
+.error_form_div .txt{width:150px !important;font-size:11px !important;padding:5px !important;}
+.error_form_div .btn{border:1px solid #00AEEF !important;background:#00AEEF !important;outline:none !important;padding:5px 8px !important;color:#FFF !important;cursor:pointer !important;font-size:11px !important;}
+
+.emiCardEligibilityError { width: 61%; padding: 10px; text-align: left !important; border: 1px solid #FFB062; font-size: 12px; line-height: 16px; margin-left: 121px;}
+
+          /**{margin:0; padding:0;}*/
+
+.upi-container{ margin:0 auto;font-family:"Helvetica neue",Helvetica,Arial,sans-serif;border: solid 2px #00adf2;}
+.vpa-pay{width:560px;margin-top:30px;position:relative;}
+.vpa-pay-form{padding:0 70px;margin-top: 0px; margin-bottom: 25px;}
+.vpa-pay-form label.error{position:absolute;border-radius:0!important;right:55px !important;top:21px !important;border:1px #999 solid;font-size:11px;}
+.vpa-pay-form .vpa-label{margin: 14px auto 0 auto;width: 192px;text-align: left;font-size: 13px;font-weight:bold;}
+.vpa-pay-form  input.text{width: 180px;  background-color: #ffffff;border: solid 1px #c9c9c9;
+font-size: 13px; padding:7px 7px 8px 8px}
+.vpa-pay-form  input.text{background-color:transparent;border:1px solid #999;border-radius:0;-webkit-border-radius:0;-moz-border-radius:0;-moz-outline-radius:0;font-size:1.1em;z-index:10;background:#FFF;margin:.5em 0;padding:7px 10px;}
+.vpa-pay-form  input:focus{outline: none;border:1px solid #00adf2;}
+.vpa-pay-form input.btn{width: 112px; color:#fff;  background-color: #00adf2; border:none;padding:8px 0 8px 0; margin-top:3px; display:inline-block}
+.vpa-pay-form p{font-size:12px; color: #9b9b9b; padding:10px 10px}
+.vpa-pay a.lrn-btn{color: #00adf2;font-size: 12px; float:right; font-weight:bold; margin-right: 36px;}
+.vpa-pay a.lrn-btn:hover{text-decoration:none;}
+.vpa-dtl-bx{background-color: #fffab2;border: solid 2px #00adf2; padding:15px 15px 0 10px; text-align:center;width: 460px; margin: 10px auto;}
+.vpa-dtl-bx p{  font-size: 12px; color: #4a4a4a; padding-bottom:10px;margin :0 0 .5em;}
+
+.vpa-pay .lrn-btn-div {position: absolute;top: -10px;right: 0;}
+
+.vpa-pay .lrn-hover {position: absolute;display: none;top: 20px;right:0;}
+.vpa-pay .lrn-hover img{height: 200px;}
+.vpa-pay .qr-code{background:url(../images/qr.png) no-repeat center center;height:150px;margin:0 auto;}
+.vpa-pay .learn-upi {margin-bottom: 20px;font-size: 11px;}
+.vpa-pay .learn-upi a{font-weight: bold;color: #00adf2;text-decoration:underline;}
+.vpa-pay .use-upi{font-size: 11px;color: #9b9b9b;padding-top: 30px;padding-bottom: 15px;}
+
+
+.vpa-pay .upi-apps {margin: 0 0 10px 0;padding: 0;list-style-type: none;background: none;display: block;width: 100%;text-align: center;vertical-align: middle;}
+.vpa-pay .upi-apps li {background-image: url(../images/app-sprite.png);background-repeat: no-repeat;display: inline-block;text-align: center;margin-right: 11px;margin-left: 11px;position: relative;}
+.vpa-pay .upi-apps .axis-pay {width: 20px;height: 20px;background-position: -2px -2px;top: -3px}
+.vpa-pay .upi-apps .bhim {width: 49px;height: 31px;background-position: -2px -26px;}
+.vpa-pay .upi-apps .citrus {width: 22px;height: 21px;background-position: -55px -2px;top: -3px;}
+.vpa-pay .upi-apps .icici {width: 20px;height: 21px;background-position: -55px -27px;top: -3px;}
+.vpa-pay .separator {text-align: center;font-size: 12px;color: #9b9b9b;position: relative;margin: 0 57px 20px;z-index: 5;clear: both;top: 10px;}
+.vpa-pay .separator:before,.vpa-pay .separator:after {content: " ";display: block;position: absolute;}
+.vpa-pay .separator:before {border-bottom: 1px solid #ccc;top: 9px;width: 100%;z-index: -2;}
+.vpa-pay .separator:after {height: 16px;width: 60px;background: #fff;left: 50%;margin-left: -30px;top: 50%;margin-top: -8px;z-index: -1;}
+.vpa-pay .qr-or{border-bottom:1px solid #edecec;float:left}
+.aligncenter{text-align:center;}
+.vpa-pay  .aligncenter{position:relative;}
+
+.autoCompleteCombo{width:192px;margin:0 auto;}
+.autocompleteField{margin-bottom:0px !important;}
+ul.autocompleteOutput{padding:0;width:202px;max-height:380px;overflow:auto;font-size:14px;float:none;margin:0 auto;position:absolute;}
+.autocompleteOutput li{list-style:none;text-align:left;padding:10px;background:#ffffff;border-left: 1px solid #ebe9ea;border-right: 1px solid #ebe9ea;border-bottom: 1px solid #f3f2f2;word-wrap:break-word;}
+.autocompleteOutput li.selected {background:#f2f0f1;}
