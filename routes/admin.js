@@ -144,13 +144,21 @@ router.get('/remove-item/:id',isLoggedIn, function(req, res, next) {
 
 router.get('/add-item',isLoggedIn, function(req, res, next) {
     res.render('shop/add-item',{
-    csrfToken: req.csrfToken()});
+      csrfToken: req.csrfToken()
+    });
 });
 
 
 router.post('/add-item',isLoggedIn, function(req, res, next) {
   upload(req, res, function(err) {
-    var item = Product.create({title: req.body.title_field, description: req.body.desc_field, price: req.body.price_field, imagePath: req.files[0].path}, function (err) { console.log(err)});
+    Product.create({
+        title: req.body.title_field, 
+        description: req.body.desc_field, 
+        price: req.body.price_field, 
+        imagePath: req.files[0].path, 
+        category: req.body.category_field
+      }, function (err) { console.log(err)}
+    );
   });
   res.redirect('/admin/modify-item');
 });

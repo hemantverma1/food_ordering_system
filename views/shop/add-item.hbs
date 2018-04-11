@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<title>Checkout</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 <form action="/admin/add-item?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">
 <p> 
     <label >Enter name: </label>
     <input id="title" type="text" name="title_field">
+</p>
+
+<p>
+    <label >Enter Category: </label>
+    <input id="category" type="text" name="category_field">
 </p>
 
 <p>
@@ -30,5 +27,3 @@
 
 
 </form>
-
-</html>

@@ -47,17 +47,12 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
-    res.locals.login = req.isAuthenticated();
-    if(req.isAuthenticated()==true)
-    {
-      SuperUser.count({_id: req.user._id}, function (err, count){ 
-      if(count>0){
+    if (req.isAuthenticated()){
+      res.locals.login = true;
+      if(req['user'].employeeId)
         res.locals.admin=true;
-          }
-      else{
+      else
         res.locals.admin=false;
-      }
-      }); 
     }
     res.locals.session = req.session;
     next();
