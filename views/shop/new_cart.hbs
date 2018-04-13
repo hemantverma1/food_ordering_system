@@ -1,0 +1,54 @@
+{{# if products }}
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <ul class="list-group">
+                {{# each products }}
+                    <li class="list-group-item">
+                        <span class="badge">{{ this.qty }}</span>
+                        <strong>{{ this.item.title }}</strong>
+                        <span class="label label-success">Rs{{ this.price }}</span>
+                        <div class="btn-group">
+                            <button class="btn btn-primary btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Options <span class="caret"></span></button>
+                            <ul class="dropdown-menu">
+                                <li><a href="/reduce/{{this.item._id}}">Remove 1 unit</a></li>
+                                <li><a href="/remove/{{this.item._id}}">Remove all</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <strong>Total: {{ totalPrice }}</strong>
+        </div>
+    </div>
+
+    <form action="/shopping-cart" method="post" id="checkout-form">
+        <h3 align=center> Delivery/Food instructions </h3>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+                <input type="text" id="inst" class="form-control" size= 100 name="inst">
+            </div>
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+                 <button type="submit" class="btn btn-success">Checkout</button>
+            </div>
+        </div>
+
+    </form>
+
+{{ else }}
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+            <img src="../frontend/empty-cart1x.png" alt="..." style="width:184px;height:153px;" class="img-responsive">
+            <h2>Nothing in the Cart</h2>
+        </div>
+    </div>
+{{/if}}
+
